@@ -109,9 +109,10 @@
 			isa = PBXGroup;
 			children = (
 				C33DFFA11ADD151E00233DF2 /* Basic */,
+				01C816F31ADD184D00AE2871 /* User */,
 				C33DFF9E1ADD146C00233DF2 /* Game */,
-				C33DFFA01ADD14D700233DF2 /* Community */,
 				C33DFF9F1ADD14AB00233DF2 /* Activity */,
+				C33DFFA01ADD14D700233DF2 /* Community */,
 				01AB00CE1ADBAF1E00D37D63 /* AppDelegate.h */,
 				01AB00CF1ADBAF1E00D37D63 /* AppDelegate.m */,
 				01AB00D71ADBAF1E00D37D63 /* Main.storyboard */,
@@ -147,6 +148,15 @@
 				01AB00E81ADBAF1E00D37D63 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01C816F31ADD184D00AE2871 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				01F430EB1ADBEBCB0034BC72 /* UserViewController.h */,
+				01F430EC1ADBEBCB0034BC72 /* UserViewController.m */,
+			);
+			name = User;
 			sourceTree = "<group>";
 		};
 		326C088FFA421475664F50B3 /* Frameworks */ = {
@@ -203,8 +213,6 @@
 				01F430D71ADBBC250034BC72 /* NavigationController.m */,
 				01F430D91ADBBCC40034BC72 /* MenuViewController.h */,
 				01F430DA1ADBBCC40034BC72 /* MenuViewController.m */,
-				01F430EB1ADBEBCB0034BC72 /* UserViewController.h */,
-				01F430EC1ADBEBCB0034BC72 /* UserViewController.m */,
 			);
 			name = Basic;
 			sourceTree = "<group>";
