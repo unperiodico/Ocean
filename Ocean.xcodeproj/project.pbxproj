@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01AB00CD1ADBAF1E00D37D63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AB00CC1ADBAF1E00D37D63 /* main.m */; };
+		01AB00D01ADBAF1E00D37D63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AB00CF1ADBAF1E00D37D63 /* AppDelegate.m */; };
+		01AB00D31ADBAF1E00D37D63 /* Ocean.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01AB00D11ADBAF1E00D37D63 /* Ocean.xcdatamodeld */; };
+		01AB00D61ADBAF1E00D37D63 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AB00D51ADBAF1E00D37D63 /* RootViewController.m */; };
+		01AB00D91ADBAF1E00D37D63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01AB00D71ADBAF1E00D37D63 /* Main.storyboard */; };
+		01AB00DB1ADBAF1E00D37D63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01AB00DA1ADBAF1E00D37D63 /* Images.xcassets */; };
+		01AB00DE1ADBAF1E00D37D63 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AB00DC1ADBAF1E00D37D63 /* LaunchScreen.xib */; };
+		01AB00EA1ADBAF1E00D37D63 /* OceanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AB00E91ADBAF1E00D37D63 /* OceanTests.m */; };
+		01F430D31ADBB1710034BC72 /* avatar@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01F430D21ADBB1710034BC72 /* avatar@2x.jpg */; };
+		01F430D81ADBBC250034BC72 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F430D71ADBBC250034BC72 /* NavigationController.m */; };
+		01F430DB1ADBBCC40034BC72 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F430DA1ADBBCC40034BC72 /* MenuViewController.m */; };
+		01F430E41ADBE7C10034BC72 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F430E31ADBE7C10034BC72 /* GameViewController.m */; };
+		01F430E71ADBE88E0034BC72 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F430E61ADBE88E0034BC72 /* ActivityViewController.m */; };
+		01F430EA1ADBEA2B0034BC72 /* CommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F430E91ADBEA2B0034BC72 /* CommunityViewController.m */; };
+		01F430ED1ADBEBCB0034BC72 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F430EC1ADBEBCB0034BC72 /* UserViewController.m */; };
+		D4871C0E7E10BFF6868AEF92 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 781783F52B5E0D72B1450935 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01AB00E41ADBAF1E00D37D63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01AB00BF1ADBAF1E00D37D63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01AB00C61ADBAF1E00D37D63;
+			remoteInfo = Ocean;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01AB00C71ADBAF1E00D37D63 /* Ocean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ocean.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01AB00CB1ADBAF1E00D37D63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01AB00CC1ADBAF1E00D37D63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		01AB00CE1ADBAF1E00D37D63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		01AB00CF1ADBAF1E00D37D63 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		01AB00D21ADBAF1E00D37D63 /* Ocean.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ocean.xcdatamodel; sourceTree = "<group>"; };
+		01AB00D41ADBAF1E00D37D63 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		01AB00D51ADBAF1E00D37D63 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		01AB00D81ADBAF1E00D37D63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01AB00DA1ADBAF1E00D37D63 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		01AB00DD1ADBAF1E00D37D63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		01AB00E31ADBAF1E00D37D63 /* OceanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OceanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01AB00E81ADBAF1E00D37D63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01AB00E91ADBAF1E00D37D63 /* OceanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OceanTests.m; sourceTree = "<group>"; };
+		01F430D21ADBB1710034BC72 /* avatar@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "avatar@2x.jpg"; sourceTree = "<group>"; };
+		01F430D61ADBBC250034BC72 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		01F430D71ADBBC250034BC72 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		01F430D91ADBBCC40034BC72 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		01F430DA1ADBBCC40034BC72 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		01F430E21ADBE7C10034BC72 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		01F430E31ADBE7C10034BC72 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		01F430E51ADBE88E0034BC72 /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
+		01F430E61ADBE88E0034BC72 /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
+		01F430E81ADBEA2B0034BC72 /* CommunityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityViewController.h; sourceTree = "<group>"; };
+		01F430E91ADBEA2B0034BC72 /* CommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityViewController.m; sourceTree = "<group>"; };
+		01F430EB1ADBEBCB0034BC72 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		01F430EC1ADBEBCB0034BC72 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		5E9BFA46BF86030F8D7AEA65 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		781783F52B5E0D72B1450935 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D38E1A000D88828E7FE53991 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01AB00C41ADBAF1E00D37D63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4871C0E7E10BFF6868AEF92 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01AB00E01ADBAF1E00D37D63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01AB00BE1ADBAF1E00D37D63 = {
+			isa = PBXGroup;
+			children = (
+				01AB00C91ADBAF1E00D37D63 /* Ocean */,
+				01AB00E61ADBAF1E00D37D63 /* OceanTests */,
+				01AB00C81ADBAF1E00D37D63 /* Products */,
+				8242D1E8419F5578925929D1 /* Pods */,
+				326C088FFA421475664F50B3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		01AB00C81ADBAF1E00D37D63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01AB00C71ADBAF1E00D37D63 /* Ocean.app */,
+				01AB00E31ADBAF1E00D37D63 /* OceanTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01AB00C91ADBAF1E00D37D63 /* Ocean */ = {
+			isa = PBXGroup;
+			children = (
+				01AB00CE1ADBAF1E00D37D63 /* AppDelegate.h */,
+				01AB00CF1ADBAF1E00D37D63 /* AppDelegate.m */,
+				01AB00D41ADBAF1E00D37D63 /* RootViewController.h */,
+				01AB00D51ADBAF1E00D37D63 /* RootViewController.m */,
+				01F430D61ADBBC250034BC72 /* NavigationController.h */,
+				01F430D71ADBBC250034BC72 /* NavigationController.m */,
+				01F430D91ADBBCC40034BC72 /* MenuViewController.h */,
+				01F430DA1ADBBCC40034BC72 /* MenuViewController.m */,
+				01F430E21ADBE7C10034BC72 /* GameViewController.h */,
+				01F430E31ADBE7C10034BC72 /* GameViewController.m */,
+				01F430E51ADBE88E0034BC72 /* ActivityViewController.h */,
+				01F430E61ADBE88E0034BC72 /* ActivityViewController.m */,
+				01F430E81ADBEA2B0034BC72 /* CommunityViewController.h */,
+				01F430E91ADBEA2B0034BC72 /* CommunityViewController.m */,
+				01F430EB1ADBEBCB0034BC72 /* UserViewController.h */,
+				01F430EC1ADBEBCB0034BC72 /* UserViewController.m */,
+				01AB00D71ADBAF1E00D37D63 /* Main.storyboard */,
+				01AB00DA1ADBAF1E00D37D63 /* Images.xcassets */,
+				01AB00DC1ADBAF1E00D37D63 /* LaunchScreen.xib */,
+				01AB00D11ADBAF1E00D37D63 /* Ocean.xcdatamodeld */,
+				01AB00CA1ADBAF1E00D37D63 /* Supporting Files */,
+			);
+			path = Ocean;
+			sourceTree = "<group>";
+		};
+		01AB00CA1ADBAF1E00D37D63 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				01AB00CB1ADBAF1E00D37D63 /* Info.plist */,
+				01F430D21ADBB1710034BC72 /* avatar@2x.jpg */,
+				01AB00CC1ADBAF1E00D37D63 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01AB00E61ADBAF1E00D37D63 /* OceanTests */ = {
+			isa = PBXGroup;
+			children = (
+				01AB00E91ADBAF1E00D37D63 /* OceanTests.m */,
+				01AB00E71ADBAF1E00D37D63 /* Supporting Files */,
+			);
+			path = OceanTests;
+			sourceTree = "<group>";
+		};
+		01AB00E71ADBAF1E00D37D63 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				01AB00E81ADBAF1E00D37D63 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		326C088FFA421475664F50B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				781783F52B5E0D72B1450935 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8242D1E8419F5578925929D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D38E1A000D88828E7FE53991 /* Pods.debug.xcconfig */,
+				5E9BFA46BF86030F8D7AEA65 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01AB00C61ADBAF1E00D37D63 /* Ocean */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01AB00ED1ADBAF1E00D37D63 /* Build configuration list for PBXNativeTarget "Ocean" */;
+			buildPhases = (
+				ED2B1138F5F6425D603440AC /* Check Pods Manifest.lock */,
+				01AB00C31ADBAF1E00D37D63 /* Sources */,
+				01AB00C41ADBAF1E00D37D63 /* Frameworks */,
+				01AB00C51ADBAF1E00D37D63 /* Resources */,
+				E6C5417E46B6E3C97C51B4FF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ocean;
+			productName = Ocean;
+			productReference = 01AB00C71ADBAF1E00D37D63 /* Ocean.app */;
+			productType = "com.apple.product-type.application";
+		};
+		01AB00E21ADBAF1E00D37D63 /* OceanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01AB00F01ADBAF1E00D37D63 /* Build configuration list for PBXNativeTarget "OceanTests" */;
+			buildPhases = (
+				01AB00DF1ADBAF1E00D37D63 /* Sources */,
+				01AB00E01ADBAF1E00D37D63 /* Frameworks */,
+				01AB00E11ADBAF1E00D37D63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01AB00E51ADBAF1E00D37D63 /* PBXTargetDependency */,
+			);
+			name = OceanTests;
+			productName = OceanTests;
+			productReference = 01AB00E31ADBAF1E00D37D63 /* OceanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01AB00BF1ADBAF1E00D37D63 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = xyzx5u;
+				TargetAttributes = {
+					01AB00C61ADBAF1E00D37D63 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					01AB00E21ADBAF1E00D37D63 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 01AB00C61ADBAF1E00D37D63;
+					};
+				};
+			};
+			buildConfigurationList = 01AB00C21ADBAF1E00D37D63 /* Build configuration list for PBXProject "Ocean" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 01AB00BE1ADBAF1E00D37D63;
+			productRefGroup = 01AB00C81ADBAF1E00D37D63 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01AB00C61ADBAF1E00D37D63 /* Ocean */,
+				01AB00E21ADBAF1E00D37D63 /* OceanTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01AB00C51ADBAF1E00D37D63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01AB00D91ADBAF1E00D37D63 /* Main.storyboard in Resources */,
+				01F430D31ADBB1710034BC72 /* avatar@2x.jpg in Resources */,
+				01AB00DE1ADBAF1E00D37D63 /* LaunchScreen.xib in Resources */,
+				01AB00DB1ADBAF1E00D37D63 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01AB00E11ADBAF1E00D37D63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E6C5417E46B6E3C97C51B4FF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED2B1138F5F6425D603440AC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01AB00C31ADBAF1E00D37D63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01F430E41ADBE7C10034BC72 /* GameViewController.m in Sources */,
+				01F430DB1ADBBCC40034BC72 /* MenuViewController.m in Sources */,
+				01AB00D01ADBAF1E00D37D63 /* AppDelegate.m in Sources */,
+				01F430EA1ADBEA2B0034BC72 /* CommunityViewController.m in Sources */,
+				01AB00CD1ADBAF1E00D37D63 /* main.m in Sources */,
+				01F430D81ADBBC250034BC72 /* NavigationController.m in Sources */,
+				01AB00D61ADBAF1E00D37D63 /* RootViewController.m in Sources */,
+				01F430ED1ADBEBCB0034BC72 /* UserViewController.m in Sources */,
+				01AB00D31ADBAF1E00D37D63 /* Ocean.xcdatamodeld in Sources */,
+				01F430E71ADBE88E0034BC72 /* ActivityViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01AB00DF1ADBAF1E00D37D63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01AB00EA1ADBAF1E00D37D63 /* OceanTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01AB00E51ADBAF1E00D37D63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01AB00C61ADBAF1E00D37D63 /* Ocean */;
+			targetProxy = 01AB00E41ADBAF1E00D37D63 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		01AB00D71ADBAF1E00D37D63 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01AB00D81ADBAF1E00D37D63 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		01AB00DC1ADBAF1E00D37D63 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01AB00DD1ADBAF1E00D37D63 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		01AB00EB1ADBAF1E00D37D63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		01AB00EC1ADBAF1E00D37D63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01AB00EE1ADBAF1E00D37D63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D38E1A000D88828E7FE53991 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Ocean/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		01AB00EF1ADBAF1E00D37D63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E9BFA46BF86030F8D7AEA65 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Ocean/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		01AB00F11ADBAF1E00D37D63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OceanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ocean.app/Ocean";
+			};
+			name = Debug;
+		};
+		01AB00F21ADBAF1E00D37D63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OceanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ocean.app/Ocean";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01AB00C21ADBAF1E00D37D63 /* Build configuration list for PBXProject "Ocean" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01AB00EB1ADBAF1E00D37D63 /* Debug */,
+				01AB00EC1ADBAF1E00D37D63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01AB00ED1ADBAF1E00D37D63 /* Build configuration list for PBXNativeTarget "Ocean" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01AB00EE1ADBAF1E00D37D63 /* Debug */,
+				01AB00EF1ADBAF1E00D37D63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01AB00F01ADBAF1E00D37D63 /* Build configuration list for PBXNativeTarget "OceanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01AB00F11ADBAF1E00D37D63 /* Debug */,
+				01AB00F21ADBAF1E00D37D63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		01AB00D11ADBAF1E00D37D63 /* Ocean.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				01AB00D21ADBAF1E00D37D63 /* Ocean.xcdatamodel */,
+			);
+			currentVersion = 01AB00D21ADBAF1E00D37D63 /* Ocean.xcdatamodel */;
+			path = Ocean.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 01AB00BF1ADBAF1E00D37D63 /* Project object */;
+}
