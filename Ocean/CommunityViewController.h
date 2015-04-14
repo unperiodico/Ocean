@@ -9,7 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "REFrostedViewController.h"
 
-@interface CommunityViewController : UIViewController
+@interface CommunityViewController : UIViewController<UIScrollViewDelegate>
+
+@property(strong,nonatomic) UIScrollView *sView;
+@property(strong,nonatomic) UIPageControl *pageControl;
+//定时器
+@property(strong,nonatomic)NSTimer *timer;
+
 
 - (IBAction)showMenu;
 
