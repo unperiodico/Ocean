@@ -21,6 +21,8 @@
 		01F430E71ADBE88E0034BC72 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F430E61ADBE88E0034BC72 /* ActivityViewController.m */; };
 		01F430EA1ADBEA2B0034BC72 /* CommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F430E91ADBEA2B0034BC72 /* CommunityViewController.m */; };
 		01F430ED1ADBEBCB0034BC72 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F430EC1ADBEBCB0034BC72 /* UserViewController.m */; };
+		C33DFFA51ADD15FD00233DF2 /* YouXiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C33DFFA31ADD15FD00233DF2 /* YouXiCell.m */; };
+		C33DFFA61ADD15FD00233DF2 /* YouXiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33DFFA41ADD15FD00233DF2 /* YouXiCell.xib */; };
 		D4871C0E7E10BFF6868AEF92 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 781783F52B5E0D72B1450935 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,10 @@
 		01F430EC1ADBEBCB0034BC72 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		5E9BFA46BF86030F8D7AEA65 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		781783F52B5E0D72B1450935 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C33DFFA21ADD15FD00233DF2 /* YouXiCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouXiCell.h; sourceTree = "<group>"; };
+		C33DFFA31ADD15FD00233DF2 /* YouXiCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouXiCell.m; sourceTree = "<group>"; };
+		C33DFFA41ADD15FD00233DF2 /* YouXiCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YouXiCell.xib; sourceTree = "<group>"; };
+		C33DFFA71ADD174200233DF2 /* UIDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDefine.h; sourceTree = "<group>"; };
 		D38E1A000D88828E7FE53991 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,6 +185,9 @@
 		C33DFF9E1ADD146C00233DF2 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				C33DFFA21ADD15FD00233DF2 /* YouXiCell.h */,
+				C33DFFA31ADD15FD00233DF2 /* YouXiCell.m */,
+				C33DFFA41ADD15FD00233DF2 /* YouXiCell.xib */,
 				01F430E21ADBE7C10034BC72 /* GameViewController.h */,
 				01F430E31ADBE7C10034BC72 /* GameViewController.m */,
 			);
@@ -207,6 +216,7 @@
 		C33DFFA11ADD151E00233DF2 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				C33DFFA71ADD174200233DF2 /* UIDefine.h */,
 				01AB00D41ADBAF1E00D37D63 /* RootViewController.h */,
 				01AB00D51ADBAF1E00D37D63 /* RootViewController.m */,
 				01F430D61ADBBC250034BC72 /* NavigationController.h */,
@@ -299,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C33DFFA61ADD15FD00233DF2 /* YouXiCell.xib in Resources */,
 				01AB00D91ADBAF1E00D37D63 /* Main.storyboard in Resources */,
 				01AB00DE1ADBAF1E00D37D63 /* LaunchScreen.xib in Resources */,
 				01AB00DB1ADBAF1E00D37D63 /* Images.xcassets in Resources */,
@@ -358,6 +369,7 @@
 				01F430EA1ADBEA2B0034BC72 /* CommunityViewController.m in Sources */,
 				01AB00CD1ADBAF1E00D37D63 /* main.m in Sources */,
 				01F430D81ADBBC250034BC72 /* NavigationController.m in Sources */,
+				C33DFFA51ADD15FD00233DF2 /* YouXiCell.m in Sources */,
 				01AB00D61ADBAF1E00D37D63 /* RootViewController.m in Sources */,
 				01F430ED1ADBEBCB0034BC72 /* UserViewController.m in Sources */,
 				01AB00D31ADBAF1E00D37D63 /* Ocean.xcdatamodeld in Sources */,
