@@ -45,7 +45,7 @@
     
     
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        NSLog(@"Reachability: %@", AFStringFromNetworkReachabilityStatus(status));
+        NSLog(@"Reachability11111: %@", AFStringFromNetworkReachabilityStatus(status));
     }];
     
     
