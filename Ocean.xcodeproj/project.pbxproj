@@ -57,8 +57,8 @@
 		01F430E31ADBE7C10034BC72 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		01F430E51ADBE88E0034BC72 /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
 		01F430E61ADBE88E0034BC72 /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
-		01F430E81ADBEA2B0034BC72 /* CommunityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityViewController.h; sourceTree = "<group>"; };
-		01F430E91ADBEA2B0034BC72 /* CommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityViewController.m; sourceTree = "<group>"; };
+		01F430E81ADBEA2B0034BC72 /* CommunityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommunityViewController.h; path = Ocean/CommunityViewController.h; sourceTree = "<group>"; };
+		01F430E91ADBEA2B0034BC72 /* CommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommunityViewController.m; path = Ocean/CommunityViewController.m; sourceTree = "<group>"; };
 		01F430EB1ADBEBCB0034BC72 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		01F430EC1ADBEBCB0034BC72 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		5E9BFA46BF86030F8D7AEA65 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,22 +108,12 @@
 		01AB00C91ADBAF1E00D37D63 /* Ocean */ = {
 			isa = PBXGroup;
 			children = (
+				C33DFFA11ADD151E00233DF2 /* Basic */,
+				C33DFF9E1ADD146C00233DF2 /* Game */,
+				C33DFFA01ADD14D700233DF2 /* Community */,
+				C33DFF9F1ADD14AB00233DF2 /* Activity */,
 				01AB00CE1ADBAF1E00D37D63 /* AppDelegate.h */,
 				01AB00CF1ADBAF1E00D37D63 /* AppDelegate.m */,
-				01AB00D41ADBAF1E00D37D63 /* RootViewController.h */,
-				01AB00D51ADBAF1E00D37D63 /* RootViewController.m */,
-				01F430D61ADBBC250034BC72 /* NavigationController.h */,
-				01F430D71ADBBC250034BC72 /* NavigationController.m */,
-				01F430D91ADBBCC40034BC72 /* MenuViewController.h */,
-				01F430DA1ADBBCC40034BC72 /* MenuViewController.m */,
-				01F430E21ADBE7C10034BC72 /* GameViewController.h */,
-				01F430E31ADBE7C10034BC72 /* GameViewController.m */,
-				01F430E51ADBE88E0034BC72 /* ActivityViewController.h */,
-				01F430E61ADBE88E0034BC72 /* ActivityViewController.m */,
-				01F430E81ADBEA2B0034BC72 /* CommunityViewController.h */,
-				01F430E91ADBEA2B0034BC72 /* CommunityViewController.m */,
-				01F430EB1ADBEBCB0034BC72 /* UserViewController.h */,
-				01F430EC1ADBEBCB0034BC72 /* UserViewController.m */,
 				01AB00D71ADBAF1E00D37D63 /* Main.storyboard */,
 				01AB00DA1ADBAF1E00D37D63 /* Images.xcassets */,
 				01AB00DC1ADBAF1E00D37D63 /* LaunchScreen.xib */,
@@ -174,6 +164,49 @@
 				5E9BFA46BF86030F8D7AEA65 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C33DFF9E1ADD146C00233DF2 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				01F430E21ADBE7C10034BC72 /* GameViewController.h */,
+				01F430E31ADBE7C10034BC72 /* GameViewController.m */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		C33DFF9F1ADD14AB00233DF2 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				01F430E51ADBE88E0034BC72 /* ActivityViewController.h */,
+				01F430E61ADBE88E0034BC72 /* ActivityViewController.m */,
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
+		C33DFFA01ADD14D700233DF2 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				01F430E81ADBEA2B0034BC72 /* CommunityViewController.h */,
+				01F430E91ADBEA2B0034BC72 /* CommunityViewController.m */,
+			);
+			name = Community;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		C33DFFA11ADD151E00233DF2 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				01AB00D41ADBAF1E00D37D63 /* RootViewController.h */,
+				01AB00D51ADBAF1E00D37D63 /* RootViewController.m */,
+				01F430D61ADBBC250034BC72 /* NavigationController.h */,
+				01F430D71ADBBC250034BC72 /* NavigationController.m */,
+				01F430D91ADBBCC40034BC72 /* MenuViewController.h */,
+				01F430DA1ADBBCC40034BC72 /* MenuViewController.m */,
+				01F430EB1ADBEBCB0034BC72 /* UserViewController.h */,
+				01F430EC1ADBEBCB0034BC72 /* UserViewController.m */,
+			);
+			name = Basic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
