@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "REFrostedViewController.h"
-
+#import "UIDefine.h"
 @interface CommunityViewController : UIViewController<UIScrollViewDelegate>
 
 @property(strong,nonatomic) UIScrollView *sView;
