@@ -18,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    self.view.backgroundColor=[UIColor groupTableViewBackgroundColor];
+    
     UIView *roView=[[UIView alloc]initWithFrame:CGRectMake(0, 64, SelfView_W, 1)];
     
     [self.view addSubview:roView];
@@ -28,14 +31,14 @@
     _sView.frame=CGRectMake(0, 64, SelfView_W, SelfView_H/3);
     _sView.delegate=self;
     _sView.backgroundColor=[UIColor redColor];
-    _sView.contentSize=CGSizeMake(SelfView_W*8, 0);
+    _sView.contentSize=CGSizeMake(SelfView_W*4, 0);
     
     [self.view addSubview:_sView];
     
-    for (int i=0; i<8; i++) {
+    for (int i=0; i<4; i++) {
         
         UIImageView *imageView=[[UIImageView alloc]initWithFrame:CGRectMake(i*SelfView_W, 0, SelfView_W, SelfView_H/3)];
-        NSString *name=[NSString stringWithFormat:@"demo%d.jpg",i+1];
+        NSString *name=[NSString stringWithFormat:@"demo%d.jpg",i];
         
         imageView.image=[UIImage imageNamed:name];
         
