@@ -24,11 +24,11 @@
             </objects>
             <point key="canvasLocation" x="1905" y="-98"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--游戏-->
         <scene sceneID="yzr-JX-uy8">
             <objects>
                 <navigationController storyboardIdentifier="navigationController_game" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pgx-FY-d5S" customClass="NavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="pZ7-PK-qn1"/>
+                    <tabBarItem key="tabBarItem" title="游戏" image="Game" id="pZ7-PK-qn1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="phk-O9-aab">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.93333339691162109" green="0.14117647707462311" blue="0.39607846736907959" alpha="1" colorSpace="deviceRGB"/>
@@ -156,11 +156,11 @@
             </objects>
             <point key="canvasLocation" x="2280" y="-98"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--活动-->
         <scene sceneID="s2J-Sk-EGy">
             <objects>
                 <navigationController storyboardIdentifier="navigationController_activity" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mDR-XX-n7g" customClass="NavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="WVn-Y3-8H0"/>
+                    <tabBarItem key="tabBarItem" title="活动" image="Activity" id="WVn-Y3-8H0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HgP-cq-hgf">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.93333339689999995" green="0.1411764771" blue="0.39607846740000002" alpha="1" colorSpace="deviceRGB"/>
@@ -232,11 +232,11 @@
             </objects>
             <point key="canvasLocation" x="1905" y="1191"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--社区-->
         <scene sceneID="6kL-0s-bfG">
             <objects>
                 <navigationController storyboardIdentifier="navigationController_community" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9nw-Lf-2in" customClass="NavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="downloads" id="08L-9P-nME"/>
+                    <tabBarItem key="tabBarItem" title="社区" image="Community" id="08L-9P-nME"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pu5-iQ-l1G">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.93333339689999995" green="0.1411764771" blue="0.39607846740000002" alpha="1" colorSpace="deviceRGB"/>
@@ -284,6 +284,11 @@
             <point key="canvasLocation" x="3017" y="1191"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Activity" width="33" height="33"/>
+        <image name="Community" width="33" height="33"/>
+        <image name="Game" width="33" height="33"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
