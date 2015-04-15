@@ -26,7 +26,7 @@
     self.tableView.separatorColor = [UIColor colorWithRed:150/255.0f green:161/255.0f blue:177/255.0f alpha:1.0f];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.scrollEnabled = NO;
+    self.tableView.scrollEnabled = YES;
     self.tableView.opaque = NO;
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableHeaderView = ({
@@ -134,8 +134,11 @@
         
         [self performSegueWithIdentifier:@"toUserController" sender:self];
 
-    } else {
+    } else if(indexPath.section == 1 && indexPath.row == 2){
         
+        NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+        [defaults setObject:nil forKey:@"UserID"];
+        [self performSegueWithIdentifier:@"logout" sender:self];
 
     }
 

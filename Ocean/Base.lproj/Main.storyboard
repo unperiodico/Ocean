@@ -164,6 +164,7 @@
                     </tableView>
                     <connections>
                         <segue destination="Lpu-bZ-aKf" kind="modal" identifier="toUserController" modalTransitionStyle="crossDissolve" id="oLy-jc-7d4"/>
+                        <segue destination="Hx5-Yg-NJP" kind="modal" identifier="logout" modalTransitionStyle="crossDissolve" id="MN7-OB-meL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kh6-k6-x34" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -384,6 +385,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="loc-Mh-uLW"/>
+        <segue reference="MN7-OB-meL"/>
     </inferredMetricsTieBreakers>
 </document>
