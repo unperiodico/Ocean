@@ -21,8 +21,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    NSLog(@"%f,%f,%f,%f",[UIScreen mainScreen].bounds.origin.x,[UIScreen mainScreen].bounds.origin.y,[UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height);
-
     //检测网络状态
     
     NSURL *baseURL = [NSURL URLWithString:@"http://www.baidu.com/"];
