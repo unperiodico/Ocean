@@ -17,7 +17,18 @@
 - (void)awakeFromNib
 {
     self.contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabbarController"];
-    self.menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuController"];
+    
+    //根据是否登陆,显示不同的Menu
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    
+    if ([defaults objectForKey:@"USER_ID"]==nil) {
+        self.menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"entryController"];
+    }
+    else {
+        self.menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuController"];
+    }
+    
+
 }
 
 //测试帐号ahy123 密码111111
@@ -29,6 +40,7 @@
     
     AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     tabbarController.selectedIndex = appDelegate.tabbarLastTimeSelectedIndex;
+    
 
 }
 

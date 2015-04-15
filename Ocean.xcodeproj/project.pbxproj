@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014FE73D1ADE48190082167F /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014FE73C1ADE48190082167F /* EntryViewController.m */; };
 		01AB00CD1ADBAF1E00D37D63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AB00CC1ADBAF1E00D37D63 /* main.m */; };
 		01AB00D01ADBAF1E00D37D63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AB00CF1ADBAF1E00D37D63 /* AppDelegate.m */; };
 		01AB00D31ADBAF1E00D37D63 /* Ocean.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01AB00D11ADBAF1E00D37D63 /* Ocean.xcdatamodeld */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		014FE73B1ADE48190082167F /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
+		014FE73C1ADE48190082167F /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
 		01AB00C71ADBAF1E00D37D63 /* Ocean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ocean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01AB00CB1ADBAF1E00D37D63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01AB00CC1ADBAF1E00D37D63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -244,6 +247,8 @@
 			children = (
 				C3C1AAC31ADDEEEA00BE329D /* LoginViewController.h */,
 				C3C1AAC41ADDEEEA00BE329D /* LoginViewController.m */,
+				014FE73B1ADE48190082167F /* EntryViewController.h */,
+				014FE73C1ADE48190082167F /* EntryViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -396,6 +401,7 @@
 				01F430ED1ADBEBCB0034BC72 /* UserViewController.m in Sources */,
 				01AB00D31ADBAF1E00D37D63 /* Ocean.xcdatamodeld in Sources */,
 				01F430E71ADBE88E0034BC72 /* ActivityViewController.m in Sources */,
+				014FE73D1ADE48190082167F /* EntryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

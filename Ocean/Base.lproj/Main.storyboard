@@ -5,6 +5,24 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
+        <!--Entry View Controller-->
+        <scene sceneID="7S9-KR-Zsn">
+            <objects>
+                <viewController storyboardIdentifier="entryController" id="fUA-cM-GaV" customClass="EntryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fnB-1v-Y9t"/>
+                        <viewControllerLayoutGuide type="bottom" id="igt-b2-lr3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v6O-8Q-g63">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1D8-GZ-rXu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905" y="-726"/>
+        </scene>
         <!--Item-->
         <scene sceneID="xas-06-pBY">
             <objects>
@@ -78,7 +96,7 @@
         <!--Menu View Controller-->
         <scene sceneID="EnZ-St-0go">
             <objects>
-                <tableViewController restorationIdentifier="menuController" storyboardIdentifier="menuController" id="gTR-bq-6zJ" customClass="MenuViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="menuController" id="gTR-bq-6zJ" customClass="MenuViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tvL-O9-HwH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
