@@ -21,13 +21,16 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - REFrostedViewController (2.4.8)
+  - SWFrameButton (1.1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - REFrostedViewController (~> 2.4)
+  - SWFrameButton
 
 SPEC CHECKSUMS:
   AFNetworking: fefbce9660acb17f48ae0011292d4da0f457bf36
   REFrostedViewController: a893b4979ba1f200c547aef9ff4c3fd5a18f5923
+  SWFrameButton: ecc81bc5356423109413745ac4ced6f879683e2b
 
 COCOAPODS: 0.36.3
