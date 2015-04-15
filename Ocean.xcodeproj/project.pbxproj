@@ -25,6 +25,7 @@
 		C33DFFA51ADD15FD00233DF2 /* YouXiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C33DFFA31ADD15FD00233DF2 /* YouXiCell.m */; };
 		C33DFFA61ADD15FD00233DF2 /* YouXiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33DFFA41ADD15FD00233DF2 /* YouXiCell.xib */; };
 		C3C1AAC51ADDEEEA00BE329D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1AAC41ADDEEEA00BE329D /* LoginViewController.m */; };
+		C3C1AB081ADE586100BE329D /* CCSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1AB071ADE586100BE329D /* CCSegmentedControl.m */; };
 		D4871C0E7E10BFF6868AEF92 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 781783F52B5E0D72B1450935 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,8 @@
 		C33DFFA71ADD174200233DF2 /* UIDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDefine.h; sourceTree = "<group>"; };
 		C3C1AAC31ADDEEEA00BE329D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C3C1AAC41ADDEEEA00BE329D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C3C1AB061ADE586100BE329D /* CCSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSegmentedControl.h; sourceTree = "<group>"; };
+		C3C1AB071ADE586100BE329D /* CCSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSegmentedControl.m; sourceTree = "<group>"; };
 		D38E1A000D88828E7FE53991 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,6 +195,8 @@
 		8242D1E8419F5578925929D1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				C3C1AB061ADE586100BE329D /* CCSegmentedControl.h */,
+				C3C1AB071ADE586100BE329D /* CCSegmentedControl.m */,
 				D38E1A000D88828E7FE53991 /* Pods.debug.xcconfig */,
 				5E9BFA46BF86030F8D7AEA65 /* Pods.release.xcconfig */,
 			);
@@ -401,6 +406,7 @@
 				01F430ED1ADBEBCB0034BC72 /* UserViewController.m in Sources */,
 				01AB00D31ADBAF1E00D37D63 /* Ocean.xcdatamodeld in Sources */,
 				01F430E71ADBE88E0034BC72 /* ActivityViewController.m in Sources */,
+				C3C1AB081ADE586100BE329D /* CCSegmentedControl.m in Sources */,
 				014FE73D1ADE48190082167F /* EntryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

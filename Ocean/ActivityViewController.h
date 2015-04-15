@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "REFrostedViewController.h"
-
+#import "CCSegmentedControl.h"
+#import "UIDefine.h"
 @interface ActivityViewController : UIViewController
 
 - (IBAction)showMenu;

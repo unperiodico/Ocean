@@ -17,12 +17,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
+    CCSegmentedControl* segmentedControl = [[CCSegmentedControl alloc] initWithItems:@[@"手游大赛", @"知识竞赛", @"商户平台"]];
+    segmentedControl.frame = CGRectMake(0, 65, SelfView_W, 50);
+    
+    //设置背景图片，或者设置颜色，或者使用默认白色外观
+    segmentedControl.backgroundImage = [UIImage imageNamed:@"segment_bg.png"];
+    //segmentedControl.backgroundColor = [UIColor grayColor];
+    
+    //阴影部分图片，不设置使用默认椭圆外观的stain
+    segmentedControl.selectedStainView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"stain.png"]];
+    
+    segmentedControl.selectedSegmentTextColor = [UIColor whiteColor];
+//    segmentedControl.segmentTextColor = [self colorWithHexString:@"#535353"];
+    [segmentedControl addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:segmentedControl];
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)valueChanged:(id)sender
+{
+    CCSegmentedControl* segmentedControl = sender;
+    NSLog(@"%s line:%d segment has changed to %ld", __FUNCTION__, __LINE__, segmentedControl.selectedSegmentIndex);
 }
 
 - (IBAction)showMenu
