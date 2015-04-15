@@ -10,8 +10,15 @@
 #import "REFrostedViewController.h"
 #import "CCSegmentedControl.h"
 #import "UIDefine.h"
+#import "ShouYouViewController.h"
+#import "ZhiShiViewController.h"
+#import "ShanghuViewController.h"
 @interface ActivityViewController : UIViewController
-
+{
+    ShouYouViewController *_shouyou;
+    ZhiShiViewController *_zhishi;
+    ShanghuViewController *_shanghu;
+}
 - (IBAction)showMenu;
 
 @end

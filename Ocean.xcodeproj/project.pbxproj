@@ -26,6 +26,9 @@
 		C33DFFA61ADD15FD00233DF2 /* YouXiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33DFFA41ADD15FD00233DF2 /* YouXiCell.xib */; };
 		C3C1AAC51ADDEEEA00BE329D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1AAC41ADDEEEA00BE329D /* LoginViewController.m */; };
 		C3C1AB081ADE586100BE329D /* CCSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1AB071ADE586100BE329D /* CCSegmentedControl.m */; };
+		C3C1AB0B1ADE67FB00BE329D /* ShouYouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1AB0A1ADE67FB00BE329D /* ShouYouViewController.m */; };
+		C3C1AB0E1ADE680A00BE329D /* ShanghuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1AB0D1ADE680A00BE329D /* ShanghuViewController.m */; };
+		C3C1AB111ADE681800BE329D /* ZhiShiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1AB101ADE681800BE329D /* ZhiShiViewController.m */; };
 		D4871C0E7E10BFF6868AEF92 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 781783F52B5E0D72B1450935 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +81,12 @@
 		C3C1AAC41ADDEEEA00BE329D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C3C1AB061ADE586100BE329D /* CCSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSegmentedControl.h; sourceTree = "<group>"; };
 		C3C1AB071ADE586100BE329D /* CCSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSegmentedControl.m; sourceTree = "<group>"; };
+		C3C1AB091ADE67FB00BE329D /* ShouYouViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShouYouViewController.h; sourceTree = "<group>"; };
+		C3C1AB0A1ADE67FB00BE329D /* ShouYouViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShouYouViewController.m; sourceTree = "<group>"; };
+		C3C1AB0C1ADE680A00BE329D /* ShanghuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShanghuViewController.h; sourceTree = "<group>"; };
+		C3C1AB0D1ADE680A00BE329D /* ShanghuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShanghuViewController.m; sourceTree = "<group>"; };
+		C3C1AB0F1ADE681800BE329D /* ZhiShiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhiShiViewController.h; sourceTree = "<group>"; };
+		C3C1AB101ADE681800BE329D /* ZhiShiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhiShiViewController.m; sourceTree = "<group>"; };
 		D38E1A000D88828E7FE53991 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,6 +229,12 @@
 			children = (
 				01F430E51ADBE88E0034BC72 /* ActivityViewController.h */,
 				01F430E61ADBE88E0034BC72 /* ActivityViewController.m */,
+				C3C1AB091ADE67FB00BE329D /* ShouYouViewController.h */,
+				C3C1AB0A1ADE67FB00BE329D /* ShouYouViewController.m */,
+				C3C1AB0C1ADE680A00BE329D /* ShanghuViewController.h */,
+				C3C1AB0D1ADE680A00BE329D /* ShanghuViewController.m */,
+				C3C1AB0F1ADE681800BE329D /* ZhiShiViewController.h */,
+				C3C1AB101ADE681800BE329D /* ZhiShiViewController.m */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -403,11 +418,14 @@
 				C33DFFA51ADD15FD00233DF2 /* YouXiCell.m in Sources */,
 				01AB00D61ADBAF1E00D37D63 /* RootViewController.m in Sources */,
 				C3C1AAC51ADDEEEA00BE329D /* LoginViewController.m in Sources */,
+				C3C1AB0B1ADE67FB00BE329D /* ShouYouViewController.m in Sources */,
 				01F430ED1ADBEBCB0034BC72 /* UserViewController.m in Sources */,
+				C3C1AB111ADE681800BE329D /* ZhiShiViewController.m in Sources */,
 				01AB00D31ADBAF1E00D37D63 /* Ocean.xcdatamodeld in Sources */,
 				01F430E71ADBE88E0034BC72 /* ActivityViewController.m in Sources */,
 				C3C1AB081ADE586100BE329D /* CCSegmentedControl.m in Sources */,
 				014FE73D1ADE48190082167F /* EntryViewController.m in Sources */,
+				C3C1AB0E1ADE680A00BE329D /* ShanghuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
