@@ -94,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		014FE73A1ADE45E70082167F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C33DFFA71ADD174200233DF2 /* UIDefine.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		01AB00BE1ADBAF1E00D37D63 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +125,7 @@
 		01AB00C91ADBAF1E00D37D63 /* Ocean */ = {
 			isa = PBXGroup;
 			children = (
+				014FE73A1ADE45E70082167F /* Utils */,
 				C3C1AAC21ADDECDD00BE329D /* Login */,
 				C33DFFA11ADD151E00233DF2 /* Basic */,
 				01C816F31ADD184D00AE2871 /* User */,
@@ -220,7 +229,6 @@
 		C33DFFA11ADD151E00233DF2 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
-				C33DFFA71ADD174200233DF2 /* UIDefine.h */,
 				01AB00D41ADBAF1E00D37D63 /* RootViewController.h */,
 				01AB00D51ADBAF1E00D37D63 /* RootViewController.m */,
 				01F430D61ADBBC250034BC72 /* NavigationController.h */,
