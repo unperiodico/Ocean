@@ -57,10 +57,13 @@
                     <navigationItem key="navigationItem" title="登陆" id="sXp-YJ-IJb">
                         <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="PRN-zc-fDC">
                             <connections>
-                                <segue destination="Hx5-Yg-NJP" kind="modal" modalTransitionStyle="crossDissolve" id="pEW-el-WbW"/>
+                                <segue destination="Hx5-Yg-NJP" kind="modal" modalTransitionStyle="crossDissolve" id="loc-Mh-uLW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Hx5-Yg-NJP" kind="modal" identifier="loginSuccess" modalTransitionStyle="crossDissolve" id="9DP-v5-OXp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCP-cu-pzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -381,6 +384,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="pEW-el-WbW"/>
+        <segue reference="loc-Mh-uLW"/>
     </inferredMetricsTieBreakers>
 </document>
