@@ -177,10 +177,13 @@
         [self.delegate frostedViewController:self willShowMenuViewController:self.menuViewController];
     }
     
+    //屏幕适配系数
+    float screenAdaptationCoefficient=([UIScreen mainScreen].bounds.size.width-375)/1.1;
+    
     self.containerViewController.animateApperance = animateApperance;
     if (self.automaticSize) {
         if (self.direction == REFrostedViewControllerDirectionLeft || self.direction == REFrostedViewControllerDirectionRight)
-            self.calculatedMenuViewSize = CGSizeMake(self.contentViewController.view.frame.size.width - 95.0f, self.contentViewController.view.frame.size.height);
+            self.calculatedMenuViewSize = CGSizeMake(self.contentViewController.view.frame.size.width - 95.0f -screenAdaptationCoefficient, self.contentViewController.view.frame.size.height);
         
         if (self.direction == REFrostedViewControllerDirectionTop || self.direction == REFrostedViewControllerDirectionBottom)
             self.calculatedMenuViewSize = CGSizeMake(self.contentViewController.view.frame.size.width, self.contentViewController.view.frame.size.height - 50.0f);
