@@ -20,6 +20,25 @@
     self.view.backgroundColor=[UIColor redColor];
     
     
+    UIScrollView *sView=[[UIScrollView alloc]init];
+    
+    sView.frame=CGRectMake(0, 0, SelfView_W, SelfView_H-40);
+    sView.contentSize=CGSizeMake(0, 180*4);
+    sView.bounces=NO;
+    
+    NSArray *arr=@[@"demo0.jpg",@"demo1.jpg",@"demo2.jpg",@"demo3.jpg"];
+    
+    for (int i=0; i<4; i++) {
+        UIImageView *imgView=[[UIImageView alloc]init];
+        imgView.frame=CGRectMake(0, i*180, SelfView_W, 180);
+        imgView.image=[UIImage imageNamed:arr[i]];
+        
+        [sView addSubview:imgView];
+    }
+    
+    [self.view addSubview:sView];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
