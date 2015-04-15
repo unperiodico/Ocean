@@ -142,8 +142,8 @@
                 }];
 
                 
-                GameViewController *game=[[GameViewController alloc]init];
-                [self presentViewController:game animated:YES completion:nil];
+                
+                [self performSegueWithIdentifier:@"loginSuccess" sender:self];
                 
                 
             }else if ([[dic objectForKey:@"Result"] isEqual:@"noUser"]) {
