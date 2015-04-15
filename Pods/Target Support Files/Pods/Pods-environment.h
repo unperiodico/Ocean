@@ -54,3 +54,9 @@
 #define COCOAPODS_VERSION_MINOR_REFrostedViewController 4
 #define COCOAPODS_VERSION_PATCH_REFrostedViewController 8
 
+// SWFrameButton
+#define COCOAPODS_POD_AVAILABLE_SWFrameButton
+#define COCOAPODS_VERSION_MAJOR_SWFrameButton 1
+#define COCOAPODS_VERSION_MINOR_SWFrameButton 1
+#define COCOAPODS_VERSION_PATCH_SWFrameButton 0
+

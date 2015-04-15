@@ -16,12 +16,55 @@
                     <view key="view" contentMode="scaleToFill" id="v6O-8Q-g63">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubf-cZ-1uw" customClass="SWFrameButton">
+                                <rect key="frame" x="39" y="142" width="197" height="195"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                <color key="tintColor" red="0.93333333330000001" green="0.1843137255" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="登陆">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="5ue-DU-g9N" kind="modal" modalTransitionStyle="crossDissolve" id="3V1-FW-bVc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1D8-GZ-rXu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1905" y="-726"/>
+        </scene>
+        <!--登陆-->
+        <scene sceneID="Oaf-ZY-UR7">
+            <objects>
+                <viewController id="acU-86-wRM" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UBm-DK-O7Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Dw-nC-SAT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o8J-7E-IdH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="登陆" id="sXp-YJ-IJb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="PRN-zc-fDC">
+                            <connections>
+                                <segue destination="Hx5-Yg-NJP" kind="modal" modalTransitionStyle="crossDissolve" id="pEW-el-WbW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BCP-cu-pzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2657" y="-726"/>
         </scene>
         <!--Item-->
         <scene sceneID="xas-06-pBY">
@@ -301,6 +344,31 @@
             </objects>
             <point key="canvasLocation" x="3017" y="1191"/>
         </scene>
+        <!--游戏-->
+        <scene sceneID="TKy-GO-c5H">
+            <objects>
+                <navigationController storyboardIdentifier="navigationController_login" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5ue-DU-g9N" customClass="NavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="游戏" image="Game" id="oB9-7d-Kfj"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="785-NX-Ggf">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.93333339689999995" green="0.1411764771" blue="0.39607846740000002" alpha="1" colorSpace="deviceRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="23"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="fep-DW-toL">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="acU-86-wRM" kind="relationship" relationship="rootViewController" id="12L-IV-PaM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kon-gZ-GvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2280" y="-726"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Activity" width="33" height="33"/>
@@ -312,4 +380,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="pEW-el-WbW"/>
+    </inferredMetricsTieBreakers>
 </document>
