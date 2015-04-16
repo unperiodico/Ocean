@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "REFrostedViewController.h"
-
-@interface UserViewController : UIViewController
-
+#import "UIDefine.h"
+#import "MyCell.h"
+@interface UserViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+    UITableView *_tbView;
+}
 
 - (IBAction)rightButton;
 

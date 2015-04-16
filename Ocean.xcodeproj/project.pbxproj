@@ -26,6 +26,8 @@
 		01F430ED1ADBEBCB0034BC72 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F430EC1ADBEBCB0034BC72 /* UserViewController.m */; };
 		C33DFFA51ADD15FD00233DF2 /* YouXiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C33DFFA31ADD15FD00233DF2 /* YouXiCell.m */; };
 		C33DFFA61ADD15FD00233DF2 /* YouXiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33DFFA41ADD15FD00233DF2 /* YouXiCell.xib */; };
+		C37FEF3E1ADF49CE005D5B32 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C37FEF3C1ADF49CE005D5B32 /* MyCell.m */; };
+		C37FEF3F1ADF49CE005D5B32 /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37FEF3D1ADF49CE005D5B32 /* MyCell.xib */; };
 		C3C1AAC51ADDEEEA00BE329D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1AAC41ADDEEEA00BE329D /* LoginViewController.m */; };
 		C3C1AB081ADE586100BE329D /* CCSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1AB071ADE586100BE329D /* CCSegmentedControl.m */; };
 		C3C1AB0B1ADE67FB00BE329D /* ShouYouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1AB0A1ADE67FB00BE329D /* ShouYouViewController.m */; };
@@ -83,6 +85,9 @@
 		C33DFFA31ADD15FD00233DF2 /* YouXiCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouXiCell.m; sourceTree = "<group>"; };
 		C33DFFA41ADD15FD00233DF2 /* YouXiCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YouXiCell.xib; sourceTree = "<group>"; };
 		C33DFFA71ADD174200233DF2 /* UIDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDefine.h; sourceTree = "<group>"; };
+		C37FEF3B1ADF49CE005D5B32 /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
+		C37FEF3C1ADF49CE005D5B32 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
+		C37FEF3D1ADF49CE005D5B32 /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
 		C3C1AAC31ADDEEEA00BE329D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C3C1AAC41ADDEEEA00BE329D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C3C1AB061ADE586100BE329D /* CCSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSegmentedControl.h; sourceTree = "<group>"; };
@@ -195,6 +200,9 @@
 			children = (
 				01F430EB1ADBEBCB0034BC72 /* UserViewController.h */,
 				01F430EC1ADBEBCB0034BC72 /* UserViewController.m */,
+				C37FEF3B1ADF49CE005D5B32 /* MyCell.h */,
+				C37FEF3C1ADF49CE005D5B32 /* MyCell.m */,
+				C37FEF3D1ADF49CE005D5B32 /* MyCell.xib */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -369,6 +377,7 @@
 				01AB00D91ADBAF1E00D37D63 /* Main.storyboard in Resources */,
 				01AB00DE1ADBAF1E00D37D63 /* LaunchScreen.xib in Resources */,
 				01AB00DB1ADBAF1E00D37D63 /* Images.xcassets in Resources */,
+				C37FEF3F1ADF49CE005D5B32 /* MyCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +441,7 @@
 				C3C1AB0B1ADE67FB00BE329D /* ShouYouViewController.m in Sources */,
 				01F430ED1ADBEBCB0034BC72 /* UserViewController.m in Sources */,
 				C3C1AB111ADE681800BE329D /* ZhiShiViewController.m in Sources */,
+				C37FEF3E1ADF49CE005D5B32 /* MyCell.m in Sources */,
 				01471A891ADF403C0001B2FD /* PostListViewController.m in Sources */,
 				01AB00D31ADBAF1E00D37D63 /* Ocean.xcdatamodeld in Sources */,
 				01F430E71ADBE88E0034BC72 /* ActivityViewController.m in Sources */,
