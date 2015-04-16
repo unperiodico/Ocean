@@ -140,21 +140,62 @@
         alertView.alertViewStyle=UIAlertViewStylePlainTextInput;
         
         [alertView show];
+    }else if (indexPath.row==2){
+        UIAlertView *alertView=[[UIAlertView alloc]initWithTitle:@"输入新密码" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        alertView.tag=20;
+        alertView.alertViewStyle=UIAlertViewStylePlainTextInput;
+        
+        [alertView show];
     }
 }
 
 //alert回调方法
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex==1) {
+    
+    if (alertView.tag==10) {
+        if (buttonIndex==1) {
+            NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+            NSString *usID=[defaults objectForKey:@"UserID"];
+            
+            UITextField *tf=[alertView textFieldAtIndex:0];
+            
+            NSString *str=[tf.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            
+            NSString *url=[NSString stringWithFormat:@"http://ahy.cz5u.com/HaiYangBBSService.asmx/UpdateUserInfo?userId=%@&nickname=%@&realname=&email=&gender=&birthday=&graduateschool=",usID,str];
+            
+            
+            AFHTTPRequestOperationManager *openmanger=[AFHTTPRequestOperationManager manager];
+            
+            openmanger.responseSerializer=[AFHTTPResponseSerializer serializer];
+            
+            openmanger.requestSerializer=[AFHTTPRequestSerializer serializer];
+            
+            [openmanger GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                
+                NSArray *arr=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+                NSLog(@"33==:%@",arr);
+                
+                //删除cell上的label控件
+                [_la removeFromSuperview];
+                [self jiexi];
+                
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                
+            }];
+            
+        }
+
+    }else{
         NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-        NSString *usID=[defaults objectForKey:@"UserID"];
+        NSString *usID=[defaults objectForKey:@"yhmName"];
         
         UITextField *tf=[alertView textFieldAtIndex:0];
         
-        NSString *str=[tf.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        
-        NSString *url=[NSString stringWithFormat:@"http://ahy.cz5u.com/HaiYangBBSService.asmx/UpdateUserInfo?userId=%@&nickname=%@&realname=&email=&gender=&birthday=&graduateschool=",usID,str];
+//        NSString *str=[tf.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *str=tf.text;
+        [defaults setObject:str forKey:@"mmPass"];
+        NSString *url=[NSString stringWithFormat:@"http://ahy.cz5u.com/HaiYangBBSService.asmx/ChangePassword?userName=%@&userPass=%@",usID,str];
         
         
         AFHTTPRequestOperationManager *openmanger=[AFHTTPRequestOperationManager manager];
@@ -166,17 +207,21 @@
         [openmanger GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
             
             NSArray *arr=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-                    NSLog(@"33==:%@",arr);
-
-            //删除cell上的label控件
-            [_la removeFromSuperview];
-            [self jiexi];
+            NSLog(@"33==:%@",arr);
+           
+            
+            
+            
+            
             
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             
         }];
-
+        
     }
+
+
+
 }
 
 
