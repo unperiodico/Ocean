@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "UIDefine.h"
-@interface ZhiShiViewController : UIViewController
+@interface ZhiShiViewController : UIViewController<UIAlertViewDelegate>
 
 @end

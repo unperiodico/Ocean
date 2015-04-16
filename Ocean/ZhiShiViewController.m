@@ -56,6 +56,16 @@
 -(void)tapGesClick:(UITapGestureRecognizer*)tap
 {
     
+    UIAlertView *alertView=[[UIAlertView alloc]initWithTitle:@"选择参赛入口" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"初中生入口",@"大学生入口", nil];
+    alertView.tag=10;
+    
+    
+    [alertView show];
+}
+
+//alert回调方法
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
     
 }
 

@@ -36,7 +36,16 @@
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(88, 40, 100, 100)];
         //如果需要自适应
 //        imageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
-        imageView.image = [UIImage imageNamed:@"avatar.jpg"];
+        
+        
+        NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+        
+        NSURL *url=[NSURL URLWithString:[defaults objectForKey:@"touxiang"]];
+        
+        [imageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"占位头像"]];
+        
+        
+//        imageView.image = [UIImage imageNamed:@"avatar.jpg"];
         imageView.layer.masksToBounds = YES;
         imageView.layer.cornerRadius = 50.0;
         imageView.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -54,8 +63,9 @@
         //用户名
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(58, 150, 160, 24)];
 
+        NSString *name=[defaults objectForKey:@"zhmName"];
         
-        label.text = @"Nick";
+        label.text = name;
         label.font = [UIFont fontWithName:@"HelveticaNeue" size:21];
         label.textAlignment = NSTextAlignmentCenter;
         label.backgroundColor = [UIColor clearColor];
