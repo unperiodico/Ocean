@@ -15,7 +15,7 @@
 @implementation LoginViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];//
+    [super viewDidLoad];
     
     
     UIColor *selfColor= [UIColor colorWithRed:38/255.0 green:176/255.0 blue:243/255.0 alpha:1];
