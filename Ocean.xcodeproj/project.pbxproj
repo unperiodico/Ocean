@@ -33,6 +33,9 @@
 		C3C1AB0B1ADE67FB00BE329D /* ShouYouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1AB0A1ADE67FB00BE329D /* ShouYouViewController.m */; };
 		C3C1AB0E1ADE680A00BE329D /* ShanghuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1AB0D1ADE680A00BE329D /* ShanghuViewController.m */; };
 		C3C1AB111ADE681800BE329D /* ZhiShiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1AB101ADE681800BE329D /* ZhiShiViewController.m */; };
+		C3C64A841ADFD12F005BF4CF /* GuanYuAHYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C64A801ADFD12F005BF4CF /* GuanYuAHYViewController.m */; };
+		C3C64A851ADFD12F005BF4CF /* GyahyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C64A821ADFD12F005BF4CF /* GyahyCell.m */; };
+		C3C64A861ADFD12F005BF4CF /* GyahyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C64A831ADFD12F005BF4CF /* GyahyCell.xib */; };
 		D4871C0E7E10BFF6868AEF92 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 781783F52B5E0D72B1450935 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +101,11 @@
 		C3C1AB0D1ADE680A00BE329D /* ShanghuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShanghuViewController.m; sourceTree = "<group>"; };
 		C3C1AB0F1ADE681800BE329D /* ZhiShiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhiShiViewController.h; sourceTree = "<group>"; };
 		C3C1AB101ADE681800BE329D /* ZhiShiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhiShiViewController.m; sourceTree = "<group>"; };
+		C3C64A7F1ADFD12F005BF4CF /* GuanYuAHYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuanYuAHYViewController.h; sourceTree = "<group>"; };
+		C3C64A801ADFD12F005BF4CF /* GuanYuAHYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuanYuAHYViewController.m; sourceTree = "<group>"; };
+		C3C64A811ADFD12F005BF4CF /* GyahyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GyahyCell.h; sourceTree = "<group>"; };
+		C3C64A821ADFD12F005BF4CF /* GyahyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GyahyCell.m; sourceTree = "<group>"; };
+		C3C64A831ADFD12F005BF4CF /* GyahyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GyahyCell.xib; sourceTree = "<group>"; };
 		D38E1A000D88828E7FE53991 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +206,11 @@
 		01C816F31ADD184D00AE2871 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				C3C64A7F1ADFD12F005BF4CF /* GuanYuAHYViewController.h */,
+				C3C64A801ADFD12F005BF4CF /* GuanYuAHYViewController.m */,
+				C3C64A811ADFD12F005BF4CF /* GyahyCell.h */,
+				C3C64A821ADFD12F005BF4CF /* GyahyCell.m */,
+				C3C64A831ADFD12F005BF4CF /* GyahyCell.xib */,
 				01F430EB1ADBEBCB0034BC72 /* UserViewController.h */,
 				01F430EC1ADBEBCB0034BC72 /* UserViewController.m */,
 				C37FEF3B1ADF49CE005D5B32 /* MyCell.h */,
@@ -375,6 +388,7 @@
 			files = (
 				C33DFFA61ADD15FD00233DF2 /* YouXiCell.xib in Resources */,
 				01AB00D91ADBAF1E00D37D63 /* Main.storyboard in Resources */,
+				C3C64A861ADFD12F005BF4CF /* GyahyCell.xib in Resources */,
 				01AB00DE1ADBAF1E00D37D63 /* LaunchScreen.xib in Resources */,
 				01AB00DB1ADBAF1E00D37D63 /* Images.xcassets in Resources */,
 				C37FEF3F1ADF49CE005D5B32 /* MyCell.xib in Resources */,
@@ -428,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3C64A851ADFD12F005BF4CF /* GyahyCell.m in Sources */,
 				01F430E41ADBE7C10034BC72 /* GameViewController.m in Sources */,
 				01F430DB1ADBBCC40034BC72 /* MenuViewController.m in Sources */,
 				01AB00D01ADBAF1E00D37D63 /* AppDelegate.m in Sources */,
@@ -447,6 +462,7 @@
 				01F430E71ADBE88E0034BC72 /* ActivityViewController.m in Sources */,
 				C3C1AB081ADE586100BE329D /* CCSegmentedControl.m in Sources */,
 				014FE73D1ADE48190082167F /* EntryViewController.m in Sources */,
+				C3C64A841ADFD12F005BF4CF /* GuanYuAHYViewController.m in Sources */,
 				C3C1AB0E1ADE680A00BE329D /* ShanghuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
