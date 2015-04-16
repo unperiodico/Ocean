@@ -80,11 +80,11 @@
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UIView *headView=[[UIView alloc]init];
-    headView.frame=CGRectMake(0, 0, SelfView_W, 250);
+    headView.frame=CGRectMake(0, 0, SelfView_W, 175);//150
     _sView=[[UIScrollView alloc]init];
     _sView.delegate=self;
     
-    _sView.frame=CGRectMake(0, 0, SelfView_W, 150);
+    _sView.frame=CGRectMake(0, 0, SelfView_W, 75);//150
     
     _sView.contentSize=CGSizeMake(SelfView_W*2, 0);
     
@@ -102,7 +102,7 @@
     
     [headView addSubview:_sView];
     
-    _pageControl=[[UIPageControl alloc]initWithFrame:CGRectMake((SelfView_W-20)/2, 130, 30, 20)];
+    _pageControl=[[UIPageControl alloc]initWithFrame:CGRectMake((SelfView_W-20)/2, 60, 30, 20)];//2  130
     
     _pageControl.numberOfPages=2;
     _pageControl.currentPageIndicatorTintColor=[UIColor blackColor];//选中颜色
@@ -110,9 +110,10 @@
     
     [headView addSubview:_pageControl];
     
-    NSArray *arr=@[@"拯救鲸鱼",@"围住海盗王",@"蓝海卫士",@"蛟龙入海",@"冰雪王国",@"围住海盗王",@"蓝海卫士",@"蛟龙入海",@"海洋食物链",@"海啸逃生",@"海上丝路",@"大家来挑战",@"认识岛屿",@"海啸逃生",@"海上丝路",@"大家来挑战"];
+    NSArray *arr=@[@"拯救鲸鱼",@"围住海盗王",@"蓝海卫士",@"蛟龙入海",@"冰雪王国",@"认识岛屿",@"大家来挑战"];
+
     
-    for (int i=0; i<16; i++) {
+    for (int i=0; i<arr.count; i++) {
         UIImageView *img=[[UIImageView alloc]init];
         
         UILabel *label=[[UILabel alloc]init];
@@ -145,6 +146,7 @@
         
         label.font=[UIFont systemFontOfSize:13];
         label.text=arr[i];
+        img.tag=i;
         
         [_sView addSubview:label];
         
@@ -158,7 +160,7 @@
     
     UIView *gjView=[[UIView alloc]init];
     gjView.backgroundColor=[UIColor whiteColor];
-    gjView.frame=CGRectMake(0, 160, SelfView_W, 200);
+    gjView.frame=CGRectMake(0, 85, SelfView_W, 200);//2  160
     
     NSArray *arr1=@[@"王大锤",@"李时珍",@"孙小喵",@"王大锤",@"李时珍",@"孙小喵"];
     NSArray *arr2=@[@"王大锤.jpg",@"李时珍.jpg",@"孙小喵.jpg",@"王大锤.jpg",@"李时珍.jpg",@"孙小喵.jpg"];
@@ -186,6 +188,7 @@
         [gjView addSubview:lbName];
         
         imgView.image=[UIImage imageNamed:arr2[i]];
+
         
         //允许用户交互
         imgView.userInteractionEnabled=YES;
@@ -207,7 +210,7 @@
 //head的高度
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 370;
+    return 295;//370
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -235,7 +238,47 @@
 //进入游戏下载
 -(void)tapGesture:(UITapGestureRecognizer*)tap
 {
-    NSLog(@"进入游戏下载");
+    UIImageView *imageView = (UIImageView*)[tap view];
+    
+    NSArray *linkArr=@[@"https://itunes.apple.com/cn/app/zheng-jiu-jing-yu/id981062251?mt=8",
+                       @"https://itunes.apple.com/cn/app/wei-zhu-hai-dao-wang/id981068868?mt=8",
+                       @"https://itunes.apple.com/cn/app/lan-hai-wei-shi/id980454839?mt=8",
+                       @"https://itunes.apple.com/cn/app/jiao-long-ru-hai/id981791615?mt=8",
+                       @"https://itunes.apple.com/cn/app/bing-xue-wang-guo/id981047950?mt=8",
+                       @"https://itunes.apple.com/cn/app/ren-shi-dao-yu/id981020696?mt=8",
+                       @"https://itunes.apple.com/cn/app/da-jia-lai-tiao-zhan/id981036547?mt=8"];
+    
+    
+    switch ((long)imageView.tag) {
+        case 0:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkArr[0]]];
+            break;
+            
+        case 1:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkArr[1]]];
+            break;
+        case 2:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkArr[2]]];
+            break;
+        case 3:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkArr[3]]];
+            break;
+        case 4:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkArr[4]]];
+            break;
+        case 5:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkArr[5]]];
+            break;
+        case 6:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkArr[6]]];
+            break;
+        case 7:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkArr[7]]];
+            break;
+        default:
+            break;
+    }
+    
 }
 //冠军简介
 -(void)tapGesture1:(UITapGestureRecognizer*)tap
