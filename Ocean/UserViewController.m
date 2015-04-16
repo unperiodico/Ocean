@@ -28,10 +28,10 @@
     
     UINib *nib=[UINib nibWithNibName:@"MyCell" bundle:nil];
     [_tbView registerNib:nib forCellReuseIdentifier:@"Cell"];
+
     [self jiexi];
     
-    _la=[[UILabel alloc]init];
-    _la.frame=CGRectMake(130, 14, [UIScreen mainScreen].bounds.size.width-160, 20);
+
     
     
 }
@@ -90,7 +90,7 @@
     if (indexPath.row==0) {
         
         if (![[_dic objectForKey:@"UserPhone"] isKindOfClass:[NSNull class]]){
-            _la.text=[_dic objectForKey:@"UserPhone"];
+            _la.text=[_dic objectForKey:@"UserBirthday"];
             NSLog(@"aaaa");
             
         }else{
@@ -99,7 +99,10 @@
             NSLog(@"bbbbb");
             
         }
-        [cell addSubview:_la];
+        _la=[[UILabel alloc]init];
+        _la.frame=CGRectMake(130, 14, [UIScreen mainScreen].bounds.size.width-160, 20);
+        [cell.contentView addSubview:_la];
+        
     }else if (indexPath.row==1){
         if (![[_dic objectForKey:@"UserNickName"] isKindOfClass:[NSNull class]]){
             _la.text=[_dic objectForKey:@"UserNickName"];
@@ -108,7 +111,9 @@
             _la.text=[_dic objectForKey:@"UserName"];
             
         }
-        [cell addSubview:_la];
+        _la=[[UILabel alloc]init];
+        _la.frame=CGRectMake(130, 14, [UIScreen mainScreen].bounds.size.width-160, 20);
+        [cell.contentView addSubview:_la];
     }
     
     
