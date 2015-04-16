@@ -144,7 +144,7 @@
         
         [self performSegueWithIdentifier:@"toUserController" sender:self];
 
-    } else if(indexPath.section == 1 && indexPath.row == 2){
+    } else if(indexPath.section == 0 && indexPath.row == 2){
         
         NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
         [defaults setObject:nil forKey:@"UserID"];
@@ -152,7 +152,7 @@
 
     }
 
-    else if(indexPath.section == 1 && indexPath.row == 0){
+    else if(indexPath.section == 0 && indexPath.row == 1){
 
    
         [self performSegueWithIdentifier:@"toGY" sender:self];
@@ -175,7 +175,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
@@ -194,7 +194,7 @@
     }
     
     if (indexPath.section == 0) {
-        NSArray *titles = @[@"                      充值", @"                      分享", @"                   帮助反馈"];
+        NSArray *titles = @[@"                      用户", @"                      关于", @"                   退出登录"];
         cell.textLabel.text = titles[indexPath.row];
     } else {
         NSArray *titles = @[@"                   关于我们", @"                      设置", @"                   退出登录"];
