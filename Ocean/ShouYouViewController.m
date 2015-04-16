@@ -17,12 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor=[UIColor redColor];
+//    self.view.backgroundColor=[UIColor redColor];
     
     
     UIScrollView *sView=[[UIScrollView alloc]init];
     
-    sView.frame=CGRectMake(0, 0, SelfView_W, SelfView_H-40);
+    sView.frame=CGRectMake(0, 0, SelfView_W, SelfView_H-165);
     sView.contentSize=CGSizeMake(0, 180*4);
     sView.bounces=NO;
     
