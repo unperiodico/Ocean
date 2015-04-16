@@ -18,7 +18,7 @@
 {
     [super viewDidLoad];
     [self.view addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureRecognized:)]];
-}
+}//test
 
 #pragma mark -
 #pragma mark Gesture recognizer
