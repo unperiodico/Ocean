@@ -343,10 +343,62 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="lad-4w-3LI" kind="push" identifier="toPostListViewController" id="J70-61-Pdh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Gd-hZ-I2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3017" y="1191"/>
+        </scene>
+        <!--（社区名）-->
+        <scene sceneID="sHi-kZ-u2f">
+            <objects>
+                <tableViewController id="lad-4w-3LI" customClass="PostListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7Qx-vp-c0m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="ZAZ-bh-IrX">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZAZ-bh-IrX" id="f5n-KZ-fQE">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lad-4w-3LI" id="9pe-0y-gzp"/>
+                            <outlet property="delegate" destination="lad-4w-3LI" id="OpH-hz-S0e"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="（社区名）" id="55H-x8-esi"/>
+                    <connections>
+                        <segue destination="5LB-5L-OWQ" kind="push" identifier="toPostDetailViewController" id="ldu-CF-wzr"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Yg-3V-fbs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3389" y="1191"/>
+        </scene>
+        <!--（帖子名）-->
+        <scene sceneID="FbF-QB-pVg">
+            <objects>
+                <viewController id="5LB-5L-OWQ" customClass="PostDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xKT-yN-bl1"/>
+                        <viewControllerLayoutGuide type="bottom" id="0U9-Qb-s3K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1qY-Bz-SXk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="（帖子名）" id="3zO-Ja-PgX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7EB-Tz-b8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3756" y="1191"/>
         </scene>
         <!--游戏-->
         <scene sceneID="TKy-GO-c5H">
