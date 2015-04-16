@@ -135,6 +135,25 @@
                     NSString *mima=[diction objectForKey:@"UserPass"];
                     [defaults setObject:mima forKey:@"mmPass"];
                     
+                    NSString *str=[NSString stringWithFormat:@"http://ahy.cz5u.com/HeadImage/upload/2_%@",[diction objectForKey:@"HeadImage"]];
+                    [defaults setObject:str forKey:@"touxiang"];
+                    
+                    if ([diction objectForKey:@"UserNickName"]==[NSNull null]) {
+                        NSString *zhmName=[diction objectForKey:@"UserName"];
+                        
+                        [defaults setValue:zhmName forKey:@"zhmName"];
+                        
+                    }else{
+                        NSString *xgmName=[diction objectForKey:@"UserNickName"];
+                        
+                        [defaults setValue:xgmName forKey:@"zhmName"];
+                    }
+                    
+                    NSString *shouji=[diction objectForKey:@"UserPhone"];
+                    if ([diction objectForKey:@"UserPhone"] !=[NSNull null]) {
+                        [defaults setObject:shouji forKey:@"shouji"];
+                    }
+                    
                     NSLog(@"%@,%@",yhm,mima);
                     
                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

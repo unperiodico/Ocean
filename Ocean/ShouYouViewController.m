@@ -33,27 +33,66 @@
         imgView.frame=CGRectMake(0, i*180, SelfView_W, 180);
         imgView.image=[UIImage imageNamed:arr[i]];
         
+        
+        //头像点击事件
+        UITapGestureRecognizer *tapGes=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGesClick:)];
+        //允许交互
+        imgView.userInteractionEnabled=YES;
+        [imgView addGestureRecognizer:tapGes];
+        
+        
+        
         [sView addSubview:imgView];
     }
     
     [self.view addSubview:sView];
     
     
+    
+    [self tishi];
+    
+}
+//提示活动结束
+-(void)tishi
+{
+    
+    _jieshu=[[UILabel alloc]initWithFrame:CGRectMake((SelfView_W-250)/2, SelfView_H-230, 250, 30)];
+
+    _jieshu.text=@"活动已结束，请关注下期活动";
+    _jieshu.backgroundColor=[UIColor orangeColor];
+    _jieshu.textAlignment=NSTextAlignmentCenter;
+    _jieshu.layer.cornerRadius=5;
+    _jieshu.clipsToBounds=YES;
+    _jieshu.textColor=[UIColor whiteColor];
+    _jieshu.hidden=YES;
+    [self.view addSubview:_jieshu];
+    
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//图片点击方法
+-(void)tapGesClick:(UITapGestureRecognizer*)tap
+{
+    _jieshu.hidden=NO;
+    //定时器
+    _timer=[NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)nextImage
+{
+    _jieshu.hidden=YES;
+    [self removeTimer];
 }
-*/
+//移除定时器
+-(void)removeTimer
+{
+    
+    //停止定时器（一旦定时器停止了，就不能在使用）
+    [self.timer invalidate];
+    self.timer=nil;
+}
 
 @end

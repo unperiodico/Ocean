@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "UIDefine.h"
 @interface ZhiShiViewController : UIViewController
 
 @end

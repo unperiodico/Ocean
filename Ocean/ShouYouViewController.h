@@ -10,4 +10,9 @@
 #import "UIDefine.h"
 @interface ShouYouViewController : UIViewController
 
+
+@property(strong,nonatomic)UILabel *jieshu;
+//定时器
+@property(strong,nonatomic)NSTimer *timer;
+
 @end

@@ -29,10 +29,7 @@
     UINib *nib=[UINib nibWithNibName:@"MyCell" bundle:nil];
     [_tbView registerNib:nib forCellReuseIdentifier:@"Cell"];
 
-    [self jiexi];
-    
 
-    
     
 }
 
@@ -55,6 +52,14 @@
 //        NSLog(@"33==:%@",arr);
         _dic=(NSDictionary*)arr[0];
         NSLog(@"1111==:%@",_dic);
+        
+        NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+        
+        NSString *userName=[_dic objectForKey:@"UserNickName"];
+        [defaults setObject:userName forKey:@"zhmName"];
+        
+        NSString *str=[NSString stringWithFormat:@"http://ahy.cz5u.com/HeadImage/upload/2_%@",[_dic objectForKey:@"HeadImage"]];
+        [defaults setObject:str forKey:@"touxiang"];
         
         [_tbView reloadData];
         
@@ -85,39 +90,40 @@
     cell.imgView.image=[UIImage imageNamed:arr[indexPath.row]];
     cell.name.text=arr[indexPath.row];
   
-    _la.textAlignment=NSTextAlignmentRight;
-    
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     if (indexPath.row==0) {
-        
-        if (![[_dic objectForKey:@"UserPhone"] isKindOfClass:[NSNull class]]){
-            _la.text=[_dic objectForKey:@"UserBirthday"];
-            NSLog(@"aaaa");
-            
-        }else{
-            _la.text=@"请绑定手机号";
-            _la.textColor = [UIColor blackColor];
-            NSLog(@"bbbbb");
-            
-        }
+
         _la=[[UILabel alloc]init];
         _la.frame=CGRectMake(130, 14, [UIScreen mainScreen].bounds.size.width-160, 20);
+        _la.textAlignment=NSTextAlignmentRight;
+        
+        NSString *sj=[defaults objectForKey:@"shouji"];
+        
+        NSLog(@"1111==:%@",sj);
+        if ([sj isKindOfClass:[NSNull class]]) {
+            _la.text=sj;
+        }else{
+            
+            _la.text=@"请绑定手机号";
+        }
+        
+        
         [cell.contentView addSubview:_la];
         
     }else if (indexPath.row==1){
-        if (![[_dic objectForKey:@"UserNickName"] isKindOfClass:[NSNull class]]){
-            _la.text=[_dic objectForKey:@"UserNickName"];
-           
-        }else{
-            _la.text=[_dic objectForKey:@"UserName"];
-            
-        }
+
+        
         _la=[[UILabel alloc]init];
         _la.frame=CGRectMake(130, 14, [UIScreen mainScreen].bounds.size.width-160, 20);
+        _la.textAlignment=NSTextAlignmentRight;
+
+        NSString *name=[defaults objectForKey:@"zhmName"];
+        _la.text=name;
+        NSLog(@"%@",name);
         [cell.contentView addSubview:_la];
+        
+        
     }
-    
-    
-    
     
     
     return cell;
@@ -161,9 +167,9 @@
             
             NSArray *arr=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
                     NSLog(@"33==:%@",arr);
-//            _dic=(NSDictionary*)arr[0];
-//            NSLog(@"1111==:%@",_dic);
-            
+
+            //删除cell上的label控件
+            [_la removeFromSuperview];
             [self jiexi];
             
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -192,11 +198,12 @@
     txImage.layer.cornerRadius=txImage.frame.size.width/2;
     txImage.clipsToBounds=YES;
     
-    NSString *str=[NSString stringWithFormat:@"http://ahy.cz5u.com/HeadImage/upload/2_%@",[_dic objectForKey:@"HeadImage"]];
-    NSURL *url=[NSURL URLWithString:str];
+//    NSString *str=[NSString stringWithFormat:@"http://ahy.cz5u.com/HeadImage/upload/2_%@",[_dic objectForKey:@"HeadImage"]];
+//    NSURL *url=[NSURL URLWithString:str];
     
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-    [defaults setObject:str forKey:@"touxiang"];
+//    [defaults setObject:str forKey:@"touxiang"];
+    NSURL *url=[NSURL URLWithString:[defaults objectForKey:@"touxiang"]];
     
     [txImage sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"占位头像"]];
     
