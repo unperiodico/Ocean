@@ -152,7 +152,13 @@
 
     }
 
+    else if(indexPath.section == 1 && indexPath.row == 0){
+
+   
+        [self performSegueWithIdentifier:@"toGY" sender:self];
     
+}
+
 
     [self.frostedViewController hideMenuViewController];
 }

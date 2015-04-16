@@ -139,6 +139,31 @@
             </objects>
             <point key="canvasLocation" x="3017" y="-98"/>
         </scene>
+        <!--关于-->
+        <scene sceneID="bNS-W4-YXh">
+            <objects>
+                <viewController id="Jpk-Be-4gQ" customClass="GuanYuAHYViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ujd-9H-GQm"/>
+                        <viewControllerLayoutGuide type="bottom" id="j9B-s9-TbL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="28M-sx-4Mw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="关于" id="6OA-7k-J3d">
+                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="8YP-Bq-hna">
+                            <connections>
+                                <segue destination="Hx5-Yg-NJP" kind="modal" modalTransitionStyle="crossDissolve" id="0Ci-gR-CeG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgW-LY-Gln" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1127" y="546"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="EnZ-St-0go">
             <objects>
@@ -165,6 +190,7 @@
                     <connections>
                         <segue destination="Lpu-bZ-aKf" kind="modal" identifier="toUserController" modalTransitionStyle="crossDissolve" id="oLy-jc-7d4"/>
                         <segue destination="Hx5-Yg-NJP" kind="modal" identifier="logout" modalTransitionStyle="crossDissolve" id="MN7-OB-meL"/>
+                        <segue destination="ysD-wa-h1B" kind="modal" identifier="toGY" modalTransitionStyle="crossDissolve" id="tpN-Ep-FrE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kh6-k6-x34" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -425,6 +451,31 @@
             </objects>
             <point key="canvasLocation" x="2280" y="-726"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="D6O-b5-Coj">
+            <objects>
+                <navigationController storyboardIdentifier="navigationController_GY" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ysD-wa-h1B" customClass="NavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="SSA-HH-pew"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KeO-Nw-fwq">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.93333339689999995" green="0.1411764771" blue="0.39607846740000002" alpha="1" colorSpace="deviceRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="23"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="sax-nl-ET4">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="Jpk-Be-4gQ" kind="relationship" relationship="rootViewController" id="WKt-CC-xD4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6v-ev-ZpX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1497" y="546"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Activity" width="33" height="33"/>
@@ -437,6 +488,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="g36-ns-aG2"/>
+        <segue reference="0Ci-gR-CeG"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -24,8 +24,7 @@
     self.navigationItem.title=@"关于爱海洋";
     
     
-    UIBarButtonItem *fh=[[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(barBtClick:)];
-    self.navigationItem.leftBarButtonItem=fh;
+    
     
     //UITableViewStyleGrouped
     _tbView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) style:UITableViewStyleGrouped];
@@ -47,10 +46,7 @@
     
 }
 
--(void)barBtClick:(UIBarButtonItem *)bt
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
