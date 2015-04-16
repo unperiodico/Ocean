@@ -146,6 +146,7 @@
 //    [self presentViewController:nav animated:YES completion:^{
 //        
 //    }];
+    [self performSegueWithIdentifier:@"toPostListViewController" sender:self];
 }
 
 //添加定时器
