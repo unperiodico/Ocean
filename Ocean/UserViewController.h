@@ -10,10 +10,16 @@
 #import "REFrostedViewController.h"
 #import "UIDefine.h"
 #import "MyCell.h"
-@interface UserViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+#import "UIImageView+WebCache.h"
+#import <AFNetworking.h>
+@interface UserViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIActionSheetDelegate,UIAlertViewDelegate>
 {
     UITableView *_tbView;
+    UILabel *_la;
+    
 }
+
+@property(strong,nonatomic)NSDictionary *dic;
 
 - (IBAction)rightButton;
 

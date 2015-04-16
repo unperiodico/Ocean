@@ -23,18 +23,11 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sP0-sg-h6S">
-                        <rect key="frame" x="130" y="14" width="164" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="imgView" destination="6HM-yf-cvw" id="KCB-5t-1tx"/>
                 <outlet property="name" destination="7ns-1V-Btl" id="4i7-lT-8dw"/>
-                <outlet property="xinXi" destination="sP0-sg-h6S" id="b6Z-Ta-CCU"/>
             </connections>
             <point key="canvasLocation" x="67" y="243"/>
         </tableViewCell>
