@@ -50,7 +50,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,8 +61,8 @@
     //取消选中状态
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     
-    NSArray *arr=@[@"yhxy",@"jrwm",@"jcxbb"];
-    NSArray *arr1=@[@"用户协议",@"加入我们",@"检查新版本"];
+    NSArray *arr=@[@"jcxbb"];
+    NSArray *arr1=@[@"检查新版本"];
     
     
     
@@ -75,7 +75,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row==2) {
+    
         
         
         
@@ -156,7 +156,7 @@
         }];
 
         
-    }
+    
 }
 
 
