@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <AFNetworking.h>
+#import "UIDefine.h"
 @interface PostDetailViewController : UIViewController
-
+@property(copy,nonatomic)NSString *url;
 @end

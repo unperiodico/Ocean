@@ -103,6 +103,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
+    NSDictionary *diction=[_mutArray objectAtIndex:indexPath.row];
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    NSString *str=[diction objectForKey:@"ArticleID"];
+    [defaults setObject:str forKey:@"tzxqID"];
+    
     [self performSegueWithIdentifier:@"toPostDetailViewController" sender:self];
     
 }
