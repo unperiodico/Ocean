@@ -388,12 +388,7 @@
 }
 
 
-- (IBAction)rightButton
-{
 
-    NSLog(@"right");
- 
-}
 
 - (void)hideTabBar {
     if (self.tabBarController.tabBar.hidden == YES) {

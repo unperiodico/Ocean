@@ -85,7 +85,7 @@
 
 -(void)avatarButtonAction:(UIButton *)sender{
     
-    [self performSegueWithIdentifier:@"toUserController" sender:self];
+//    [self performSegueWithIdentifier:@"toUserController" sender:self];
     
 }
 
