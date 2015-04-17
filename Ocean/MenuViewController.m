@@ -21,8 +21,8 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
     
+    [self.tableView reloadData];
     self.tableView.separatorColor = [UIColor colorWithRed:150/255.0f green:161/255.0f blue:177/255.0f alpha:1.0f];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -41,7 +41,7 @@
         NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
         
         NSURL *url=[NSURL URLWithString:[defaults objectForKey:@"touxiang"]];
-        
+        NSLog(@"%@",url);
         [imageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"占位头像"]];
         
         
@@ -64,6 +64,7 @@
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(58, 150, 160, 24)];
 
         NSString *name=[defaults objectForKey:@"zhmName"];
+        NSLog(@"%@",name);
         
         label.text = name;
         label.font = [UIFont fontWithName:@"HelveticaNeue" size:21];
@@ -147,7 +148,8 @@
     } else if(indexPath.section == 0 && indexPath.row == 2){
         
         NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-        [defaults setObject:nil forKey:@"UserID"];
+//        [defaults setObject:nil forKey:@"UserID"];
+        [defaults removeObjectForKey:@"UserID"];
         [self performSegueWithIdentifier:@"logout" sender:self];
 
     }

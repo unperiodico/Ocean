@@ -19,7 +19,6 @@
 		01AB00D61ADBAF1E00D37D63 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AB00D51ADBAF1E00D37D63 /* RootViewController.m */; };
 		01AB00D91ADBAF1E00D37D63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01AB00D71ADBAF1E00D37D63 /* Main.storyboard */; };
 		01AB00DB1ADBAF1E00D37D63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01AB00DA1ADBAF1E00D37D63 /* Images.xcassets */; };
-		01AB00DE1ADBAF1E00D37D63 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AB00DC1ADBAF1E00D37D63 /* LaunchScreen.xib */; };
 		01AB00EA1ADBAF1E00D37D63 /* OceanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AB00E91ADBAF1E00D37D63 /* OceanTests.m */; };
 		01F430D81ADBBC250034BC72 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F430D71ADBBC250034BC72 /* NavigationController.m */; };
 		01F430DB1ADBBCC40034BC72 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F430DA1ADBBCC40034BC72 /* MenuViewController.m */; };
@@ -78,7 +77,6 @@
 		01AB00D51ADBAF1E00D37D63 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		01AB00D81ADBAF1E00D37D63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01AB00DA1ADBAF1E00D37D63 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		01AB00DD1ADBAF1E00D37D63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		01AB00E31ADBAF1E00D37D63 /* OceanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OceanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01AB00E81ADBAF1E00D37D63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01AB00E91ADBAF1E00D37D63 /* OceanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OceanTests.m; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 				01AB00CF1ADBAF1E00D37D63 /* AppDelegate.m */,
 				01AB00D71ADBAF1E00D37D63 /* Main.storyboard */,
 				01AB00DA1ADBAF1E00D37D63 /* Images.xcassets */,
-				01AB00DC1ADBAF1E00D37D63 /* LaunchScreen.xib */,
 				01AB00D11ADBAF1E00D37D63 /* Ocean.xcdatamodeld */,
 				01AB00CA1ADBAF1E00D37D63 /* Supporting Files */,
 			);
@@ -417,7 +414,6 @@
 				C33DFFA61ADD15FD00233DF2 /* YouXiCell.xib in Resources */,
 				01AB00D91ADBAF1E00D37D63 /* Main.storyboard in Resources */,
 				C3C64A861ADFD12F005BF4CF /* GyahyCell.xib in Resources */,
-				01AB00DE1ADBAF1E00D37D63 /* LaunchScreen.xib in Resources */,
 				C3CA933F1AE0B8AC00911A49 /* ZhuCeViewController.xib in Resources */,
 				01AB00DB1ADBAF1E00D37D63 /* Images.xcassets in Resources */,
 				C37FEF3F1ADF49CE005D5B32 /* MyCell.xib in Resources */,
@@ -528,14 +524,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		01AB00DC1ADBAF1E00D37D63 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01AB00DD1ADBAF1E00D37D63 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -624,6 +612,7 @@
 			baseConfigurationReference = D38E1A000D88828E7FE53991 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Ocean/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -636,6 +625,7 @@
 			baseConfigurationReference = 5E9BFA46BF86030F8D7AEA65 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Ocean/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
