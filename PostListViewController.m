@@ -22,6 +22,62 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    _mutArray=[[NSMutableArray alloc]init];
+    _tzIdArray=[[NSMutableArray alloc]init];
+    
+    
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    
+    NSString *titname=[defaults objectForKey:@"titleName"];
+    self.navigationItem.title=titname;
+    
+    _pageCount=1;
+    
+    [self jiexi:_pageCount];
+    
+}
+
+-(void)jiexi:(NSInteger)pageCount
+{
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    NSString *tzid=[defaults objectForKey:@"tzID"];
+    
+    
+    
+    NSString *url=[NSString stringWithFormat:@"http://ahy.cz5u.com/HaiYangBBSService.asmx/PostList?typeId=%@&souValue=&currPage=%li&pageCount=1&pageSize=10&tiao=",tzid,(long)pageCount];
+    
+    AFHTTPRequestOperationManager *openmanger=[AFHTTPRequestOperationManager manager];
+    openmanger.responseSerializer=[AFHTTPResponseSerializer serializer];
+    [openmanger GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSArray *arr=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"%@",arr);
+        _dic=(NSDictionary*)arr[0];
+        
+        if (![[_dic objectForKey:@"Result"] isEqual:@"noPost"]) {
+            
+            for (int i=0; i<arr.count; i++) {
+                [_mutArray addObject:[arr objectAtIndex:i]];
+                NSDictionary *dic1=_mutArray[i];
+                [_tzIdArray addObject:[dic1 objectForKey:@"ArticleID"]];
+                
+                //[_tbView reloadData];
+            }
+            NSLog(@"帖子ID======:::%@",_tzIdArray);
+            
+            [self.tableView reloadData];
+            
+        }
+
+        
+                
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,15 +88,15 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 10;
+    return _mutArray.count;
 }
 
 //点击cell事件
@@ -55,8 +111,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-//     Configure the cell...
+    NSDictionary *diction=_mutArray[indexPath.row];
     
+   cell.textLabel.text=[diction objectForKey:@"ArticleTitle"];
+
     return cell;
 }
 
@@ -104,5 +162,12 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//head的高度
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 1;
+}
+
 
 @end

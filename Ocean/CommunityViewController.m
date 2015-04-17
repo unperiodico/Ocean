@@ -122,30 +122,52 @@
 //进入帖子的方法
 -(void)btClick:(UIButton*)btn
 {
-//    TieZiViewController *tz=[[TieZiViewController alloc]init];
-//    UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:tz];
-//    if (btn.tag==1) {
-//        tz.titleText=@"学生";
-//        tz.userId=@"11";
-//    }else if (btn.tag==2){
-//        tz.titleText=@"教师";
-//        tz.userId=@"2";
-//    }else if (btn.tag==3){
-//        tz.titleText=@"公众";
-//        tz.userId=@"7";
-//    }else if (btn.tag==4){
-//        tz.titleText=@"开发者";
-//        tz.userId=@"8";
-//    }else if (btn.tag==5){
-//        tz.titleText=@"商家";
-//        
-//    }else if (btn.tag==6){
-//        tz.titleText=@"公告";
-//        tz.userId=@"5";
-//    }
-//    [self presentViewController:nav animated:YES completion:^{
-//        
-//    }];
+    PostListViewController *tz=[[PostListViewController alloc]init];
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    if (btn.tag==1) {
+        
+        NSString *tit=@"学生";
+        NSString *tzID=@"11";
+        [defaults setObject:tit forKey:@"titleName"];
+        [defaults setObject:tzID forKey:@"tzID"];
+       
+    }else if (btn.tag==2){
+        
+        
+        NSString *tit=@"教师";
+        NSString *tzID=@"2";
+        [defaults setObject:tit forKey:@"titleName"];
+        [defaults setObject:tzID forKey:@"tzID"];
+        
+    }else if (btn.tag==3){
+        
+        NSString *tit=@"公众";
+        NSString *tzID=@"7";
+        [defaults setObject:tit forKey:@"titleName"];
+        [defaults setObject:tzID forKey:@"tzID"];
+        
+    }else if (btn.tag==4){
+        
+        
+        NSString *tit=@"开发者";
+        NSString *tzID=@"8";
+        [defaults setObject:tit forKey:@"titleName"];
+        [defaults setObject:tzID forKey:@"tzID"];
+    }else if (btn.tag==5){
+        
+        NSString *tit=@"商家";
+        NSString *tzID=@"";
+        [defaults setObject:tit forKey:@"titleName"];
+        [defaults setObject:tzID forKey:@"tzID"];
+        
+    }else if (btn.tag==6){
+        
+        NSString *tit=@"公告";
+        NSString *tzID=@"5";
+        [defaults setObject:tit forKey:@"titleName"];
+        [defaults setObject:tzID forKey:@"tzID"];
+    }
+
     [self performSegueWithIdentifier:@"toPostListViewController" sender:self];
 }
 
