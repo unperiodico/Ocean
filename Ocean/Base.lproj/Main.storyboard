@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Hx5-Yg-NJP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Hx5-Yg-NJP">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
@@ -524,7 +524,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7EB-Tz-b8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3756" y="1191"/>
+            <point key="canvasLocation" x="3812" y="1249"/>
         </scene>
         <!--游戏-->
         <scene sceneID="TKy-GO-c5H">
@@ -579,7 +579,6 @@
         <!--活动-->
         <scene sceneID="Hpa-g9-boD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F0I-Wn-wgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="navigationController_dati" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lmR-JT-zyL" customClass="NavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="活动" image="Activity" id="jjI-vS-CnU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q0h-ri-m7v">
@@ -598,6 +597,7 @@
                         <segue destination="EmE-mc-Bs9" kind="relationship" relationship="rootViewController" id="vzt-gI-Cwh"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F0I-Wn-wgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3586" y="546"/>
         </scene>
