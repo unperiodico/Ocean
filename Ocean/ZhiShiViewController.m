@@ -66,6 +66,27 @@
 //alert回调方法
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
+    if(buttonIndex ==0){
+
+        //取消
+        return;
+    }
+    else if(buttonIndex ==1){
+        NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+        [defaults setObject:@"chuzhong" forKey:@"nianji"];
+
+
+        
+        //初中生入口
+    }
+    else if(buttonIndex ==2){
+        NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+        [defaults setObject:@"daxue" forKey:@"nianji"];
+        //大学生
+    }
+    UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *next = [board instantiateViewControllerWithIdentifier:@"navigationController_dati"];
+    [self presentViewController:next animated:NO completion:nil];
     
 }
 

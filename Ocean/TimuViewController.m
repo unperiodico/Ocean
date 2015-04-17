@@ -69,70 +69,141 @@
     BGRadioView *radioView =  (BGRadioView*) [cell viewWithTag:3];
     UITextView *textView = (UITextView*) [cell viewWithTag:2];
     NSMutableArray *sortByItemsArray = [[NSMutableArray alloc]init];
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     
-    switch (indexPath.row) {
-        case 0:
-            textView.text= @"北极熊的皮肤是什么颜色？";
-
-            
-            [sortByItemsArray addObject:@"黑色"];
-            [sortByItemsArray addObject:@"粉色"];
-            [sortByItemsArray addObject:@"白色"];
-            [sortByItemsArray addObject:@"黄色"];
-
-            break;
-            
-        case 1:
-            textView.text= @"我国第一大岛是？";
-            
-            
-            [sortByItemsArray addObject:@"台湾岛"];
-            [sortByItemsArray addObject:@"海南岛"];
-            [sortByItemsArray addObject:@"崇明岛"];
-            [sortByItemsArray addObject:@"南澳岛"];
-            
-            break;
-            
-        case 2:
-            textView.text= @"珊瑚是哪种生物？";
-            
-            
-            [sortByItemsArray addObject:@"动物"];
-            [sortByItemsArray addObject:@"植物"];
-            [sortByItemsArray addObject:@"微生物"];
-            [sortByItemsArray addObject:@"外星生物"];
-            
-            break;
-            
-        case 3:
-            textView.text= @"世界四大洋中面积最小的是";
-            
-            
-            [sortByItemsArray addObject:@"太平洋"];
-            [sortByItemsArray addObject:@"印度洋"];
-            [sortByItemsArray addObject:@"大西洋"];
-            [sortByItemsArray addObject:@"北冰洋"];
-            
-            break;
-            
-        case 4:
-            textView.text= @"鱼类靠什么来平衡身体？";
-            
-            
-            [sortByItemsArray addObject:@"鱼鳔"];
-            [sortByItemsArray addObject:@"鱼鳃"];
-            [sortByItemsArray addObject:@"鱼鳞"];
-            [sortByItemsArray addObject:@"鱼尾"];
-            
-            break;
-            
-        default:
-            
-
-            break;
-            
-
+    if ([[defaults objectForKey:@"nianji"] isEqualToString:@"chuzhong"] ){
+        switch (indexPath.row) {
+            case 0:
+                textView.text= @"北极熊的皮肤是什么颜色？";
+                
+                
+                [sortByItemsArray addObject:@"黑色"];
+                [sortByItemsArray addObject:@"粉色"];
+                [sortByItemsArray addObject:@"白色"];
+                [sortByItemsArray addObject:@"黄色"];
+                
+                break;
+                
+            case 1:
+                textView.text= @"我国第一大岛是？";
+                
+                
+                [sortByItemsArray addObject:@"台湾岛"];
+                [sortByItemsArray addObject:@"海南岛"];
+                [sortByItemsArray addObject:@"崇明岛"];
+                [sortByItemsArray addObject:@"南澳岛"];
+                
+                break;
+                
+            case 2:
+                textView.text= @"珊瑚是哪种生物？";
+                
+                
+                [sortByItemsArray addObject:@"动物"];
+                [sortByItemsArray addObject:@"植物"];
+                [sortByItemsArray addObject:@"微生物"];
+                [sortByItemsArray addObject:@"外星生物"];
+                
+                break;
+                
+            case 3:
+                textView.text= @"世界四大洋中面积最小的是";
+                
+                
+                [sortByItemsArray addObject:@"太平洋"];
+                [sortByItemsArray addObject:@"印度洋"];
+                [sortByItemsArray addObject:@"大西洋"];
+                [sortByItemsArray addObject:@"北冰洋"];
+                
+                break;
+                
+            case 4:
+                textView.text= @"鱼类靠什么来平衡身体？";
+                
+                
+                [sortByItemsArray addObject:@"鱼鳔"];
+                [sortByItemsArray addObject:@"鱼鳃"];
+                [sortByItemsArray addObject:@"鱼鳞"];
+                [sortByItemsArray addObject:@"鱼尾"];
+                
+                break;
+                
+            default:
+                
+                
+                break;
+                
+                
+        }
+    }else {
+        
+        switch (indexPath.row) {
+            case 0:
+                textView.text= @"火箭发动机的鱼雷，其最大航速为？";
+                
+                
+                [sortByItemsArray addObject:@"接近50节"];
+                [sortByItemsArray addObject:@"达到70节"];
+                [sortByItemsArray addObject:@"超过90节"];
+                [sortByItemsArray addObject:@"110节左右"];
+                
+                break;
+                
+            case 1:
+                textView.text= @"第一位步行完成南极探险的中国人是？";
+                
+                
+                [sortByItemsArray addObject:@"秦大河"];
+                [sortByItemsArray addObject:@"位梦华"];
+                [sortByItemsArray addObject:@"金乃千"];
+                [sortByItemsArray addObject:@"郭坤"];
+                
+                break;
+                
+            case 2:
+                textView.text= @"自1768年起，三闯南极圈的航海家库克船长国籍是？";
+                
+                
+                [sortByItemsArray addObject:@"美国"];
+                [sortByItemsArray addObject:@"英国"];
+                [sortByItemsArray addObject:@"法国"];
+                [sortByItemsArray addObject:@"挪威"];
+                
+                break;
+                
+            case 3:
+                textView.text= @"按岛屿自然形成的成因，台湾岛属于";
+                
+                
+                [sortByItemsArray addObject:@"大陆岛"];
+                [sortByItemsArray addObject:@"火山岛"];
+                [sortByItemsArray addObject:@"珊瑚岛"];
+                [sortByItemsArray addObject:@"冲积岛"];
+                
+                break;
+                
+            case 4:
+                textView.text= @"金枪鱼的体温比周围的水温高（ ）摄氏度";
+                
+                
+                [sortByItemsArray addObject:@"1"];
+                [sortByItemsArray addObject:@"3"];
+                [sortByItemsArray addObject:@"9"];
+                [sortByItemsArray addObject:@"15"];
+                
+                break;
+                
+            default:
+                
+                
+                break;
+                
+                
+        }
+        
     }
+    
+
     
 
     radioView.rowItems =  sortByItemsArray;
