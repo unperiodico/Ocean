@@ -11,6 +11,8 @@
 		01471A891ADF403C0001B2FD /* PostListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01471A881ADF403C0001B2FD /* PostListViewController.m */; };
 		014802051AE0A7F700BD89E7 /* BGRadioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 014802041AE0A7F700BD89E7 /* BGRadioView.m */; };
 		014FE73D1ADE48190082167F /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014FE73C1ADE48190082167F /* EntryViewController.m */; };
+		017502991AE0B22C0002E7A5 /* TimuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017502981AE0B22C0002E7A5 /* TimuViewController.m */; };
+		0175029C1AE0D8870002E7A5 /* FenshuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0175029B1AE0D8870002E7A5 /* FenshuViewController.m */; };
 		01AB00CD1ADBAF1E00D37D63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AB00CC1ADBAF1E00D37D63 /* main.m */; };
 		01AB00D01ADBAF1E00D37D63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AB00CF1ADBAF1E00D37D63 /* AppDelegate.m */; };
 		01AB00D31ADBAF1E00D37D63 /* Ocean.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01AB00D11ADBAF1E00D37D63 /* Ocean.xcdatamodeld */; };
@@ -59,6 +61,10 @@
 		014802041AE0A7F700BD89E7 /* BGRadioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGRadioView.m; sourceTree = "<group>"; };
 		014FE73B1ADE48190082167F /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
 		014FE73C1ADE48190082167F /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
+		017502971AE0B22C0002E7A5 /* TimuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimuViewController.h; sourceTree = "<group>"; };
+		017502981AE0B22C0002E7A5 /* TimuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimuViewController.m; sourceTree = "<group>"; };
+		0175029A1AE0D8870002E7A5 /* FenshuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FenshuViewController.h; sourceTree = "<group>"; };
+		0175029B1AE0D8870002E7A5 /* FenshuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FenshuViewController.m; sourceTree = "<group>"; };
 		01AB00C71ADBAF1E00D37D63 /* Ocean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ocean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01AB00CB1ADBAF1E00D37D63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01AB00CC1ADBAF1E00D37D63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -267,6 +273,10 @@
 				C3C1AB0D1ADE680A00BE329D /* ShanghuViewController.m */,
 				C3C1AB0F1ADE681800BE329D /* ZhiShiViewController.h */,
 				C3C1AB101ADE681800BE329D /* ZhiShiViewController.m */,
+				017502971AE0B22C0002E7A5 /* TimuViewController.h */,
+				017502981AE0B22C0002E7A5 /* TimuViewController.m */,
+				0175029A1AE0D8870002E7A5 /* FenshuViewController.h */,
+				0175029B1AE0D8870002E7A5 /* FenshuViewController.m */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -459,7 +469,9 @@
 				01AB00D61ADBAF1E00D37D63 /* RootViewController.m in Sources */,
 				C3C1AAC51ADDEEEA00BE329D /* LoginViewController.m in Sources */,
 				01471A831ADF3FA10001B2FD /* PostDetailViewController.m in Sources */,
+				0175029C1AE0D8870002E7A5 /* FenshuViewController.m in Sources */,
 				C3C1AB0B1ADE67FB00BE329D /* ShouYouViewController.m in Sources */,
+				017502991AE0B22C0002E7A5 /* TimuViewController.m in Sources */,
 				01F430ED1ADBEBCB0034BC72 /* UserViewController.m in Sources */,
 				C3C1AB111ADE681800BE329D /* ZhiShiViewController.m in Sources */,
 				C37FEF3E1ADF49CE005D5B32 /* MyCell.m in Sources */,

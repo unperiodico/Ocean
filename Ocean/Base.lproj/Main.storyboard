@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Hx5-Yg-NJP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Hx5-Yg-NJP">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Entry View Controller-->
@@ -293,10 +294,93 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="EmE-mc-Bs9" kind="push" identifier="showtimu" id="ed1-9M-VRy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q5K-aS-M5j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3017" y="546"/>
+        </scene>
+        <!--题目-->
+        <scene sceneID="dZf-kB-VwJ">
+            <objects>
+                <tableViewController id="EmE-mc-Bs9" customClass="TimuViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="190" sectionHeaderHeight="10" sectionFooterHeight="10" id="zwm-u0-AY5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="190" id="nIi-Xf-cEr">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nIi-Xf-cEr" id="Ecl-XD-6OG">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1G3-fo-rYd" customClass="BGRadioView">
+                                            <rect key="frame" x="8" y="59" width="304" height="127"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyx-a8-jT4">
+                                            <rect key="frame" x="8" y="8" width="304" height="51"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="51" id="emR-CI-Ksk"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1G3-fo-rYd" firstAttribute="trailing" secondItem="Ecl-XD-6OG" secondAttribute="trailingMargin" id="CC1-1J-r5d"/>
+                                        <constraint firstItem="1G3-fo-rYd" firstAttribute="leading" secondItem="Ecl-XD-6OG" secondAttribute="leadingMargin" id="Qfa-nH-jDo"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1G3-fo-rYd" secondAttribute="bottom" constant="-5" id="aH9-pY-UcL"/>
+                                        <constraint firstItem="dyx-a8-jT4" firstAttribute="leading" secondItem="Ecl-XD-6OG" secondAttribute="leadingMargin" id="o62-k8-f1e"/>
+                                        <constraint firstItem="1G3-fo-rYd" firstAttribute="top" secondItem="dyx-a8-jT4" secondAttribute="bottom" id="pel-8k-PgF"/>
+                                        <constraint firstItem="dyx-a8-jT4" firstAttribute="top" secondItem="Ecl-XD-6OG" secondAttribute="topMargin" id="pfw-0F-m6R"/>
+                                        <constraint firstItem="dyx-a8-jT4" firstAttribute="trailing" secondItem="Ecl-XD-6OG" secondAttribute="trailingMargin" id="qXo-F8-Pdk"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="EmE-mc-Bs9" id="jp3-QE-tw4"/>
+                            <outlet property="delegate" destination="EmE-mc-Bs9" id="wTz-8X-wxu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="题目" id="DeV-54-SyE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="iBv-Ll-HnI">
+                            <connections>
+                                <action selector="commitButton:" destination="EmE-mc-Bs9" id="pBv-Qe-2UY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="mhk-tz-eM8" kind="push" identifier="jiaojuan" id="cVy-8D-1GQ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wd6-jl-EHv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3441" y="546"/>
+        </scene>
+        <!--分数-->
+        <scene sceneID="sLl-lS-rtH">
+            <objects>
+                <viewController id="mhk-tz-eM8" customClass="FenshuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PU1-QB-j5E"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ie6-7n-kDq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c5N-7w-3Ht">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="分数" id="HbU-oY-Y4O"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nX0-eT-1Vh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3816" y="546"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="h3K-ON-bho">

@@ -120,11 +120,14 @@ int selectedRow = -1;
     tableView.delegate = self;
     tableView.bounces = NO;
     [tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
+    
     //[tableView setBackgroundColor:[UIColor grayColor]];
     
     [tableView setBackgroundColor:[UIColor colorWithRed:242/255.f green:235/255.f blue:235/255.f alpha:1]];
     [self addSubview:tableView];
 }
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.
