@@ -217,11 +217,6 @@
                                 <segue destination="Hx5-Yg-NJP" kind="modal" modalTransitionStyle="crossDissolve" id="g36-ns-aG2"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="SNO-TP-74z">
-                            <connections>
-                                <action selector="rightButton" destination="3rl-Be-MAj" id="PBf-aa-p1g"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="Hx5-Yg-NJP" kind="modal" identifier="zhuxiao" modalTransitionStyle="crossDissolve" id="eeM-aj-Dqr"/>
@@ -738,6 +733,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="879-Mv-9rT"/>
+        <segue reference="g36-ns-aG2"/>
     </inferredMetricsTieBreakers>
 </document>

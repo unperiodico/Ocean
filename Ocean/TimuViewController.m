@@ -69,7 +69,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSString *CellIdentifier = [NSString stringWithFormat:@"Cell%lu%lu", [indexPath section], [indexPath row]];//以indexPath来唯一确定cell
+    NSString *CellIdentifier = [NSString stringWithFormat:@"Cell%lu%lu", (long)[indexPath section], (long)[indexPath row]];//以indexPath来唯一确定cell
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     BGRadioView *radioView =  (BGRadioView*) [cell viewWithTag:3];
