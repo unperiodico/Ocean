@@ -265,7 +265,7 @@
         if ([_mima.text isEqualToString:_querenmima.text]){
             
             
-            NSString *url=[NSString stringWithFormat:@"http://ahy.cz5u.com/HaiYangBBSService.asmx/UserRegister?type=EM&emailOrPhone=%@&userPass=%@",_zhanghao.text,_mima.text];
+            NSString *url=[NSString stringWithFormat:@"http://ahy.cz5u.com/HaiYangBBSService.asmx/UserRegister?type=PH&emailOrPhone=%@&userPass=%@",_zhanghao.text,_mima.text];
             
             //            NSString *url=@"http://ahy.cz5u.com/HaiYangBBSService.asmx/UserRegister?type=PH&emailOrPhone=13810133832&userPass=111111";
             NSString *ahy= [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];

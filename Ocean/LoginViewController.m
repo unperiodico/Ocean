@@ -141,14 +141,16 @@
                     NSString *str=[NSString stringWithFormat:@"http://ahy.cz5u.com/HeadImage/upload/2_%@",[diction objectForKey:@"HeadImage"]];
                     [defaults setObject:str forKey:@"touxiang"];
                     
+                    
+                    
                     if ([diction objectForKey:@"UserNickName"]==[NSNull null]) {
                         NSString *zhmName=[diction objectForKey:@"UserName"];
-                        
+                        NSLog(@"%@",zhmName);
                         [defaults setValue:zhmName forKey:@"zhmName"];
                         
                     }else{
                         NSString *xgmName=[diction objectForKey:@"UserNickName"];
-                        
+                        NSLog(@"%@",xgmName);
                         [defaults setValue:xgmName forKey:@"zhmName"];
                     }
                     
@@ -159,13 +161,15 @@
                     
                     NSLog(@"%@,%@",yhm,mima);
                     
+                    [self performSegueWithIdentifier:@"loginSuccess" sender:self];
+                    
                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                     
                 }];
 
                 
                 
-                [self performSegueWithIdentifier:@"loginSuccess" sender:self];
+                
                 
                 
             }else if ([[dic objectForKey:@"Result"] isEqual:@"noUser"]) {
