@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01471A831ADF3FA10001B2FD /* PostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01471A821ADF3FA10001B2FD /* PostDetailViewController.m */; };
 		01471A891ADF403C0001B2FD /* PostListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01471A881ADF403C0001B2FD /* PostListViewController.m */; };
+		014802051AE0A7F700BD89E7 /* BGRadioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 014802041AE0A7F700BD89E7 /* BGRadioView.m */; };
 		014FE73D1ADE48190082167F /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 014FE73C1ADE48190082167F /* EntryViewController.m */; };
 		01AB00CD1ADBAF1E00D37D63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AB00CC1ADBAF1E00D37D63 /* main.m */; };
 		01AB00D01ADBAF1E00D37D63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AB00CF1ADBAF1E00D37D63 /* AppDelegate.m */; };
@@ -54,6 +55,8 @@
 		01471A821ADF3FA10001B2FD /* PostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDetailViewController.m; sourceTree = "<group>"; };
 		01471A871ADF403C0001B2FD /* PostListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostListViewController.h; sourceTree = "<group>"; };
 		01471A881ADF403C0001B2FD /* PostListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostListViewController.m; sourceTree = "<group>"; };
+		014802031AE0A7F700BD89E7 /* BGRadioView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGRadioView.h; sourceTree = "<group>"; };
+		014802041AE0A7F700BD89E7 /* BGRadioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGRadioView.m; sourceTree = "<group>"; };
 		014FE73B1ADE48190082167F /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
 		014FE73C1ADE48190082167F /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
 		01AB00C71ADBAF1E00D37D63 /* Ocean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ocean.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,6 +234,8 @@
 		8242D1E8419F5578925929D1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				014802031AE0A7F700BD89E7 /* BGRadioView.h */,
+				014802041AE0A7F700BD89E7 /* BGRadioView.m */,
 				C3C1AB061ADE586100BE329D /* CCSegmentedControl.h */,
 				C3C1AB071ADE586100BE329D /* CCSegmentedControl.m */,
 				D38E1A000D88828E7FE53991 /* Pods.debug.xcconfig */,
@@ -448,6 +453,7 @@
 				01AB00D01ADBAF1E00D37D63 /* AppDelegate.m in Sources */,
 				01F430EA1ADBEA2B0034BC72 /* CommunityViewController.m in Sources */,
 				01AB00CD1ADBAF1E00D37D63 /* main.m in Sources */,
+				014802051AE0A7F700BD89E7 /* BGRadioView.m in Sources */,
 				01F430D81ADBBC250034BC72 /* NavigationController.m in Sources */,
 				C33DFFA51ADD15FD00233DF2 /* YouXiCell.m in Sources */,
 				01AB00D61ADBAF1E00D37D63 /* RootViewController.m in Sources */,
