@@ -8,10 +8,9 @@
 
 #import "GuanYuAHYViewController.h"
 
-@interface GuanYuAHYViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
+@interface GuanYuAHYViewController ()
 
-@property(strong,nonatomic)UITableView *tbView;
-@property(copy,nonatomic)NSString *url;
+
 
 
 @end
@@ -23,303 +22,49 @@
     
     self.navigationItem.title=@"关于爱海洋";
     
-    
-    
-    
-    //UITableViewStyleGrouped
-    _tbView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) style:UITableViewStyleGrouped];
-    
-    _tbView.delegate=self;
-    _tbView.dataSource=self;
-    
-    [self.view addSubview:_tbView];
-    
-    //注册cell的nib文件
-    UINib *nib=[UINib nibWithNibName:@"GyahyCell" bundle:nil];
-    [_tbView registerNib:nib forCellReuseIdentifier:@"str"];
-    
-    
-    
-    
-    
-    
-    
-}
-
-
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 1;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    GyahyCell *cell=[tableView dequeueReusableCellWithIdentifier:@"str"];
-    
-    //取消选中状态
-    cell.selectionStyle=UITableViewCellSelectionStyleNone;
-    
-    NSArray *arr=@[@"jcxbb"];
-    NSArray *arr1=@[@"检查新版本"];
-    
-    
-    
-    cell.imgView.image=[UIImage imageNamed:arr[indexPath.row]];
-    cell.name.text=arr1[indexPath.row];
-    
-    return cell;
-    
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-        
-        
-        
-        NSString *url=@"http://itunes.apple.com/lookup?id=966484167";//   950920000//966484167
-        
-        AFHTTPRequestOperationManager *openmanger=[AFHTTPRequestOperationManager manager];
-        
-        openmanger.responseSerializer=[AFHTTPResponseSerializer serializer];
-        
-        openmanger.requestSerializer=[AFHTTPRequestSerializer serializer];
-        
-        [openmanger GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            
-//            NSArray *arr=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-//            NSLog(@"33==:%@",arr);
-            
-            NSDictionary *diction=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-            NSLog(@"1111111===:%@",diction);
-            
-            
-            NSString *resu=[diction objectForKey:@"resultCount"];
-            
-            double resultCount=[resu doubleValue];
-            
-            if (resultCount==0) {
-                NSString *titleStr=[NSString stringWithFormat:@"检查更新：海洋知识竞赛"];
-                
-                UIAlertView *alert=[[UIAlertView alloc]initWithTitle:titleStr message:@"暂无新版本" delegate:self cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
-                
-                
-                
-                [alert show];
-            }else{
-                NSDictionary *dic=[diction objectForKey:@"results"][0];
-                
-                NSString *ysxbb=[dic objectForKey:@"version"];
-                _url=[dic objectForKey:@"trackViewUrl"];
-                NSLog(@"%@",_url);
-                
-                NSDictionary *infoDict=[[NSBundle mainBundle] infoDictionary];
-                NSString *sss=[infoDict objectForKey:@"CFBundleVersion"];
-                NSString *name=[dic objectForKey:@"trackName"];
-                
-                double doublecurrentversion=[sss doubleValue];
-                double doubleUpdateVersion=[ysxbb doubleValue];
-                
-                
-                NSLog(@"%@",[diction objectForKey:@"resultCount"]);
-                
-                
-                if (doublecurrentversion < doubleUpdateVersion) {
-                    NSString *titleStr=[NSString stringWithFormat:@"检查更新：%@",name];
-                    NSString *messageStr=[NSString stringWithFormat:@"发现新版本（%@），是否升级？",ysxbb];
-                    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:titleStr message:messageStr delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"升级", nil];
-                    
-                    alert.tag=10;
-                    
-                    [alert show];
-                    
-                }else{
-                    NSString *titleStr=[NSString stringWithFormat:@"检查更新：%@",name];
-                    
-                    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:titleStr message:@"暂无新版本" delegate:self cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
-                    
-                    
-                    
-                    [alert show];
-                }
-                
-            }
-            
-            
-
-           
-            
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            
-        }];
-
-        
-    
-}
-
-
-
--(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 150)];
-    
-    UIImageView *imView=[[UIImageView alloc]initWithFrame:CGRectMake((view.frame.size.width-100)/2, 15, 100, 100)];
+    UIImageView *imView=[[UIImageView alloc]initWithFrame:CGRectMake((SelfView_W-100)/2, 75, 100, 100)];
     imView.image=[UIImage imageNamed:@"海洋知识竞赛"];
-    [view addSubview:imView];
+    [self.view addSubview:imView];
     
-    UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake((view.frame.size.width-100)/2, 120, 100, 20)];
+    UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake((SelfView_W-100)/2, 180, 100, 20)];
     label.text=@"爱海洋社区 1.5";
     label.font=[UIFont boldSystemFontOfSize:13];
     label.textAlignment=NSTextAlignmentCenter;
-    [view addSubview:label];
-    
-    
-    return view;
-}
+    [self.view addSubview:label];
 
--(UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 100)];
     
-    UILabel *youxiang=[[UILabel alloc]initWithFrame:CGRectMake(0, 10, [UIScreen mainScreen].bounds.size.width, 15)];
+    UILabel *label1=[[UILabel alloc]initWithFrame:CGRectMake(5, 205, SelfView_W-10, 145)];
+    
+    label1.text=@"北京爱海洋文化传播有限公司，成立于2014年12月，主要研发、推广、运营 ，2015年全国海洋知识竞赛手游，全国大中学生海洋知识竞赛（以下简称“竞赛”）至今已成功举办七届。竞赛创办 以来，坚持普及海洋知识、传播海洋文化，引导大中学生树立现代海洋观念，切实提高了广大青少年的海洋意识，在 社会上产生了良好影响。 为深入贯彻党的十八大关于“建设海洋强国”的战略部署和习近平总书记“要进一步关心 海洋、认识海洋、经略海洋”的指示精神，引导青少年学习海洋知识、增强海洋意识，为实现中华民族伟大复兴而奋斗。";
+    label1.numberOfLines=10;
+    label1.font=[UIFont boldSystemFontOfSize:12];
+    
+    [self.view addSubview:label1];
+    
+    UILabel *youxiang=[[UILabel alloc]initWithFrame:CGRectMake(0, 355, SelfView_W, 15)];
     youxiang.text=@"邮箱:aihaiyang@qq.com";
     
     youxiang.font=[UIFont italicSystemFontOfSize:10];
     youxiang.textAlignment=NSTextAlignmentCenter;
-    [view addSubview:youxiang];
+    [self.view addSubview:youxiang];
     
-    UILabel *weixin=[[UILabel alloc]initWithFrame:CGRectMake(0, 25, [UIScreen mainScreen].bounds.size.width, 15)];
+    
+    UILabel *weixin=[[UILabel alloc]initWithFrame:CGRectMake(0, 370, SelfView_W, 15)];
     weixin.text=@"微信公众账号:aihaiyang";
     weixin.font=[UIFont italicSystemFontOfSize:10];
     weixin.textAlignment=NSTextAlignmentCenter;
-    [view addSubview:weixin];
+    [self.view addSubview:weixin];
     
     
-    UILabel *weibo=[[UILabel alloc]initWithFrame:CGRectMake(0, 40, [UIScreen mainScreen].bounds.size.width, 15)];
+    
+    UILabel *weibo=[[UILabel alloc]initWithFrame:CGRectMake(0, 385, SelfView_W, 15)];
     weibo.text=@"新浪微博:@爱海洋";
     weibo.font=[UIFont italicSystemFontOfSize:10];
     weibo.textAlignment=NSTextAlignmentCenter;
-    [view addSubview:weibo];
-    
-    
-    return view;
-    
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 150;
-}
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 100;
-}
-
-
-
--(void)requestFinished:(NSData *)requestData
-{
-    
-    NSDictionary *diction=[NSJSONSerialization JSONObjectWithData:requestData options:NSJSONReadingMutableContainers error:nil];
-    NSLog(@"1111111===:%@",diction);
-    
-    //NSArray *arr=[dic objectForKey:@"results"];
-//    if (![arr count]) {
-//        
-//    }
-//    NSDictionary *dic=[diction objectForKey:@"results"][0];
-//    
-//    NSString *ysxbb=[dic objectForKey:@"version"];
-//    _url=[dic objectForKey:@"trackViewUrl"];
-//    NSLog(@"%@",_url);
-//    
-//    NSDictionary *infoDict=[[NSBundle mainBundle] infoDictionary];
-//    NSString *sss=[infoDict objectForKey:@"CFBundleVersion"];
-//    NSString *name=[dic objectForKey:@"trackName"];
-//    
-//    double doublecurrentversion=[sss doubleValue];
-//    double doubleUpdateVersion=[ysxbb doubleValue];
-//    
-//    
-//    NSLog(@"%@",[diction objectForKey:@"resultCount"]);
-    NSString *resu=[diction objectForKey:@"resultCount"];
-    
-    double resultCount=[resu doubleValue];
-    
-    if (resultCount==0) {
-        NSString *titleStr=[NSString stringWithFormat:@"检查更新：海洋知识竞赛"];
-        
-        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:titleStr message:@"暂无新版本" delegate:self cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
-        
-        
-        
-        [alert show];
-    }else{
-        NSDictionary *dic=[diction objectForKey:@"results"][0];
-        
-        NSString *ysxbb=[dic objectForKey:@"version"];
-        _url=[dic objectForKey:@"trackViewUrl"];
-        NSLog(@"%@",_url);
-        
-        NSDictionary *infoDict=[[NSBundle mainBundle] infoDictionary];
-        NSString *sss=[infoDict objectForKey:@"CFBundleVersion"];
-        NSString *name=[dic objectForKey:@"trackName"];
-        
-        double doublecurrentversion=[sss doubleValue];
-        double doubleUpdateVersion=[ysxbb doubleValue];
-        
-        
-        NSLog(@"%@",[diction objectForKey:@"resultCount"]);
-        
-        
-        if (doublecurrentversion < doubleUpdateVersion) {
-            NSString *titleStr=[NSString stringWithFormat:@"检查更新：%@",name];
-            NSString *messageStr=[NSString stringWithFormat:@"发现新版本（%@），是否升级？",ysxbb];
-            UIAlertView *alert=[[UIAlertView alloc]initWithTitle:titleStr message:messageStr delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"升级", nil];
-            
-            alert.tag=10;
-            
-            [alert show];
-            
-        }else{
-            NSString *titleStr=[NSString stringWithFormat:@"检查更新：%@",name];
-            
-            UIAlertView *alert=[[UIAlertView alloc]initWithTitle:titleStr message:@"暂无新版本" delegate:self cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
-            
-            
-            
-            [alert show];
-        }
-
-    }
-    
-    
-    
-}
-
-//alertview回调方法
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    
-    if (alertView.tag==10) {
-        if (buttonIndex==0) {
-           
-        }else{
-            NSURL *iTunesURL = [NSURL URLWithString:_url];
-            NSLog(@"%@",_url);
-            [[UIApplication sharedApplication] openURL:iTunesURL];
-        }
-    }
-    
+    [self.view addSubview:weibo];
     
 }
 
 
--(void)requestFailed:(NSError *)error
-{
-    NSLog(@"%@",error);
-}
 
 @end

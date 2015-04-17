@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GyahyCell.h"
 #import <AFNetworking.h>
+#import "UIDefine.h"
 @interface GuanYuAHYViewController : UIViewController
 
 @end

@@ -146,6 +146,11 @@
         alertView.alertViewStyle=UIAlertViewStylePlainTextInput;
         
         [alertView show];
+    }else{
+        NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+        //        [defaults setObject:nil forKey:@"UserID"];
+        [defaults removeObjectForKey:@"UserID"];
+        [self performSegueWithIdentifier:@"zhuxiao" sender:self];
     }
 }
 

@@ -69,7 +69,7 @@
     
     [kefu setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [kefu setTitle:@"联系客服" forState:UIControlStateNormal];
-    
+    [kefu addTarget:self action:@selector(lxClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:kefu];
     
     
@@ -84,6 +84,22 @@
     
     [self.view addSubview:xinyonghu];
     
+}
+
+//联系客服
+-(void)lxClick:(UIButton*)bt
+{
+    UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:@"联系客服" message:@"客服电话:010-51438222" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    
+    [alertview show];
+}
+
+//alertView的回调方法
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex==1) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://010-51438222"]];
+    }
 }
 
 //新用户

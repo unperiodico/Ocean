@@ -158,9 +158,19 @@
     }
     
     
+    
+    
     UIView *gjView=[[UIView alloc]init];
     gjView.backgroundColor=[UIColor whiteColor];
     gjView.frame=CGRectMake(0, 85, SelfView_W, 200);//2  160
+    
+    
+    UILabel *titlabel=[[UILabel alloc]initWithFrame:CGRectMake(5, 0, 50, 20)];
+    titlabel.text=@"历届冠军";
+    titlabel.font=[UIFont boldSystemFontOfSize:12];
+    
+    [gjView addSubview:titlabel];
+    
     
     NSArray *arr1=@[@"王大锤",@"李时珍",@"孙小喵",@"王大锤",@"李时珍",@"孙小喵"];
     NSArray *arr2=@[@"王大锤.jpg",@"李时珍.jpg",@"孙小喵.jpg",@"王大锤.jpg",@"李时珍.jpg",@"孙小喵.jpg"];
