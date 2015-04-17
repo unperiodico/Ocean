@@ -58,18 +58,50 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 7;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     YouXiCell *cell=[tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    
+    cell.name.text=@"获奖感言";
+    [cell.name setTextColor:[UIColor darkGrayColor]];
     //取消选中状态
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
+//    [@"张珊",@"刘向东",@"孙丽",@"王磊",@"李雪儿",@"陈志"];
+    switch (indexPath.row) {
+            
+
+        case 0:
+
+            cell.imgView.image=[UIImage imageNamed:@"张珊.jpg"];
+            cell.jianjie.text=@"蛟龙入海，我每天晚上都玩啊。";
+            break;
+        case 1:
+            cell.imgView.image=[UIImage imageNamed:@"刘向东.jpg"];
+            cell.jianjie.text=@"我在这次比赛中认识了很多岛屿！";
+            
+            break;
+        case 2:
+            cell.imgView.image=[UIImage imageNamed:@"孙丽.jpg"];
+            cell.jianjie.text=@"围住海盗王我玩了很久才通关。。";
+            break;
+        case 3:
+            cell.imgView.image=[UIImage imageNamed:@"王磊.jpg"];
+            cell.jianjie.text=@"海洋食物链真神奇啊。";
+            break;
+        case 4:
+            cell.imgView.image=[UIImage imageNamed:@"李雪儿.jpg"];
+            cell.jianjie.text=@"同桌推荐我玩的，没想到获奖了！真开心！";
+            break;
+        case 5:
+            cell.imgView.image=[UIImage imageNamed:@"陈志.jpg"];
+            cell.jianjie.text=@"我比较喜欢蓝海卫视～ 推荐大家试试～";
+            break;
+
+    }
     
-    cell.imgView.image=[UIImage imageNamed:@"王大锤.jpg"];
-    cell.jianjie.text=@"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+
     
     
     return cell;
@@ -172,8 +204,8 @@
     [gjView addSubview:titlabel];
     
     
-    NSArray *arr1=@[@"王大锤",@"李时珍",@"孙小喵",@"王大锤",@"李时珍",@"孙小喵"];
-    NSArray *arr2=@[@"王大锤.jpg",@"李时珍.jpg",@"孙小喵.jpg",@"王大锤.jpg",@"李时珍.jpg",@"孙小喵.jpg"];
+    NSArray *arr1=@[@"张珊",@"刘向东",@"孙丽",@"王磊",@"李雪儿",@"陈志"];
+    NSArray *arr2=@[@"张珊.jpg",@"刘向东.jpg",@"孙丽.jpg",@"王磊.jpg",@"李雪儿.jpg",@"陈志.jpg"];
     for (int i=0; i<6; i++) {
         UIImageView *imgView=[[UIImageView alloc]init];
         UILabel *lbName=[[UILabel alloc]init];
