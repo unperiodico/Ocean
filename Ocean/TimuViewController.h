@@ -10,7 +10,7 @@
 #import "BGRadioView.h"
 
 @interface TimuViewController : UITableViewController
-<BGRadioViewDelegate>
+<BGRadioViewDelegate,UIAlertViewDelegate>
 - (IBAction)commitButton:(id)sender;
 
 @end

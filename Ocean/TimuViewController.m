@@ -63,8 +63,14 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored"-Wshorten-64-to-32"
 
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 2.0;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    NSString *CellIdentifier = [NSString stringWithFormat:@"Cell%lu%lu", [indexPath section], [indexPath row]];//以indexPath来唯一确定cell
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     BGRadioView *radioView =  (BGRadioView*) [cell viewWithTag:3];
     UITextView *textView = (UITextView*) [cell viewWithTag:2];
@@ -268,7 +274,17 @@
 */
 
 - (IBAction)commitButton:(id)sender {
-    [self performSegueWithIdentifier:@"jiaojuan" sender:self];
+
+    UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:@"恭喜您" message:@"答题完毕" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+    
+    [alertview show];
+    
+}
+
+//alertView的回调方法
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [self performSegueWithIdentifier:@"goback" sender:self];
     
 }
 @end
