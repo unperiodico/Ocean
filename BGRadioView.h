@@ -20,9 +20,12 @@
 //A variable to keep track of our current option.
 @property (assign, nonatomic) int optionNo;
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wincompatible-property-type"
+//写在这个中间的代码,都不会被编译器提示-Wdeprecated-declarations类型的警告
+
 
 @property (assign, nonatomic) int tag;
-
 #pragma clang diagnostic pop
 
 // A boolean to keep track of whether list item is editable or not.

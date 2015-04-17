@@ -59,13 +59,17 @@ int selectedRow = -1;
     [cell.contentView addSubview:labelOne];
     return cell;
 }
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wshorten-64-to-32"
+//写在这个中间的代码,都不会被编译器提示-Wdeprecated-declarations类型的警告
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     optionNo = indexPath.row;
     [self.delegate radioView:self didSelectOption:indexPath.row fortag:tag];
     [tableView reloadData];
 }
-
+#pragma clang diagnostic pop
 - (void)setRating:(float)rating {
     rating = rating;
 }
