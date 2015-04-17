@@ -39,6 +39,9 @@
 		C3C64A841ADFD12F005BF4CF /* GuanYuAHYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C64A801ADFD12F005BF4CF /* GuanYuAHYViewController.m */; };
 		C3C64A851ADFD12F005BF4CF /* GyahyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C64A821ADFD12F005BF4CF /* GyahyCell.m */; };
 		C3C64A861ADFD12F005BF4CF /* GyahyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C64A831ADFD12F005BF4CF /* GyahyCell.xib */; };
+		C3CA933D1AE0B8AC00911A49 /* ShouJiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CA93391AE0B8AC00911A49 /* ShouJiViewController.m */; };
+		C3CA933E1AE0B8AC00911A49 /* ZhuCeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CA933B1AE0B8AC00911A49 /* ZhuCeViewController.m */; };
+		C3CA933F1AE0B8AC00911A49 /* ZhuCeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3CA933C1AE0B8AC00911A49 /* ZhuCeViewController.xib */; };
 		D4871C0E7E10BFF6868AEF92 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 781783F52B5E0D72B1450935 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +118,11 @@
 		C3C64A811ADFD12F005BF4CF /* GyahyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GyahyCell.h; sourceTree = "<group>"; };
 		C3C64A821ADFD12F005BF4CF /* GyahyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GyahyCell.m; sourceTree = "<group>"; };
 		C3C64A831ADFD12F005BF4CF /* GyahyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GyahyCell.xib; sourceTree = "<group>"; };
+		C3CA93381AE0B8AC00911A49 /* ShouJiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShouJiViewController.h; sourceTree = "<group>"; };
+		C3CA93391AE0B8AC00911A49 /* ShouJiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShouJiViewController.m; sourceTree = "<group>"; };
+		C3CA933A1AE0B8AC00911A49 /* ZhuCeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhuCeViewController.h; sourceTree = "<group>"; };
+		C3CA933B1AE0B8AC00911A49 /* ZhuCeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhuCeViewController.m; sourceTree = "<group>"; };
+		C3CA933C1AE0B8AC00911A49 /* ZhuCeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZhuCeViewController.xib; sourceTree = "<group>"; };
 		D38E1A000D88828E7FE53991 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -311,6 +319,11 @@
 		C3C1AAC21ADDECDD00BE329D /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				C3CA93381AE0B8AC00911A49 /* ShouJiViewController.h */,
+				C3CA93391AE0B8AC00911A49 /* ShouJiViewController.m */,
+				C3CA933A1AE0B8AC00911A49 /* ZhuCeViewController.h */,
+				C3CA933B1AE0B8AC00911A49 /* ZhuCeViewController.m */,
+				C3CA933C1AE0B8AC00911A49 /* ZhuCeViewController.xib */,
 				C3C1AAC31ADDEEEA00BE329D /* LoginViewController.h */,
 				C3C1AAC41ADDEEEA00BE329D /* LoginViewController.m */,
 				014FE73B1ADE48190082167F /* EntryViewController.h */,
@@ -405,6 +418,7 @@
 				01AB00D91ADBAF1E00D37D63 /* Main.storyboard in Resources */,
 				C3C64A861ADFD12F005BF4CF /* GyahyCell.xib in Resources */,
 				01AB00DE1ADBAF1E00D37D63 /* LaunchScreen.xib in Resources */,
+				C3CA933F1AE0B8AC00911A49 /* ZhuCeViewController.xib in Resources */,
 				01AB00DB1ADBAF1E00D37D63 /* Images.xcassets in Resources */,
 				C37FEF3F1ADF49CE005D5B32 /* MyCell.xib in Resources */,
 			);
@@ -459,6 +473,7 @@
 			files = (
 				C3C64A851ADFD12F005BF4CF /* GyahyCell.m in Sources */,
 				01F430E41ADBE7C10034BC72 /* GameViewController.m in Sources */,
+				C3CA933D1AE0B8AC00911A49 /* ShouJiViewController.m in Sources */,
 				01F430DB1ADBBCC40034BC72 /* MenuViewController.m in Sources */,
 				01AB00D01ADBAF1E00D37D63 /* AppDelegate.m in Sources */,
 				01F430EA1ADBEA2B0034BC72 /* CommunityViewController.m in Sources */,
@@ -477,6 +492,7 @@
 				C37FEF3E1ADF49CE005D5B32 /* MyCell.m in Sources */,
 				01471A891ADF403C0001B2FD /* PostListViewController.m in Sources */,
 				01AB00D31ADBAF1E00D37D63 /* Ocean.xcdatamodeld in Sources */,
+				C3CA933E1AE0B8AC00911A49 /* ZhuCeViewController.m in Sources */,
 				01F430E71ADBE88E0034BC72 /* ActivityViewController.m in Sources */,
 				C3C1AB081ADE586100BE329D /* CCSegmentedControl.m in Sources */,
 				014FE73D1ADE48190082167F /* EntryViewController.m in Sources */,

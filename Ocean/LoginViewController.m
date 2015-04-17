@@ -89,7 +89,10 @@
 //新用户
 -(void)xyhClick:(UIButton*)btn
 {
+    ZhuCeViewController *zc=[[ZhuCeViewController alloc]init];
+    UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:zc];
     
+    [self presentViewController:nav animated:NO completion:nil];
 }
 
 //登录
@@ -114,7 +117,7 @@
             NSArray *arr=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
             
             NSDictionary *dic=(NSDictionary *)arr[0];
-            
+            NSLog(@"%@",dic);
             
             if ([[dic objectForKey:@"Result"] isEqual:@"true"]) {
                 

@@ -54,7 +54,7 @@
 - (void)valueChanged:(id)sender
 {
     CCSegmentedControl* segmentedControl = sender;
-    NSLog(@"%s line:%d segment has changed to %ld", __FUNCTION__, __LINE__, segmentedControl.selectedSegmentIndex);
+    NSLog(@"%s line:%d segment has changed to %ld", __FUNCTION__, __LINE__, (long)segmentedControl.selectedSegmentIndex);
     
     
     
