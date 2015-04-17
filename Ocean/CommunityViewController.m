@@ -122,7 +122,7 @@
 //进入帖子的方法
 -(void)btClick:(UIButton*)btn
 {
-    PostListViewController *tz=[[PostListViewController alloc]init];
+    
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     if (btn.tag==1) {
         

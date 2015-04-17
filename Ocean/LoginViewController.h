@@ -10,7 +10,7 @@
 #import <AFNetworking.h>
 #import "UIDefine.h"
 #import "GameViewController.h"
-
+#import "ZhuCeViewController.h"
 @interface LoginViewController : UIViewController
 
 
