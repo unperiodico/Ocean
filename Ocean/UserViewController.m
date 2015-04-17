@@ -187,36 +187,39 @@
         }
 
     }else{
-        NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-        NSString *usID=[defaults objectForKey:@"yhmName"];
-        
-        UITextField *tf=[alertView textFieldAtIndex:0];
-        
-//        NSString *str=[tf.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        NSString *str=tf.text;
-        [defaults setObject:str forKey:@"mmPass"];
-        NSString *url=[NSString stringWithFormat:@"http://ahy.cz5u.com/HaiYangBBSService.asmx/ChangePassword?userName=%@&userPass=%@",usID,str];
-        
-        
-        AFHTTPRequestOperationManager *openmanger=[AFHTTPRequestOperationManager manager];
-        
-        openmanger.responseSerializer=[AFHTTPResponseSerializer serializer];
-        
-        openmanger.requestSerializer=[AFHTTPRequestSerializer serializer];
-        
-        [openmanger GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (buttonIndex==1) {
+            NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+            NSString *usID=[defaults objectForKey:@"yhmName"];
             
-            NSArray *arr=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-            NSLog(@"33==:%@",arr);
-           
+            UITextField *tf=[alertView textFieldAtIndex:0];
+            
+            //        NSString *str=[tf.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            NSString *str=tf.text;
+            [defaults setObject:str forKey:@"mmPass"];
+            NSString *url=[NSString stringWithFormat:@"http://ahy.cz5u.com/HaiYangBBSService.asmx/ChangePassword?userName=%@&userPass=%@",usID,str];
             
             
+            AFHTTPRequestOperationManager *openmanger=[AFHTTPRequestOperationManager manager];
             
+            openmanger.responseSerializer=[AFHTTPResponseSerializer serializer];
             
+            openmanger.requestSerializer=[AFHTTPRequestSerializer serializer];
             
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            
-        }];
+            [openmanger GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                
+                NSArray *arr=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+                NSLog(@"33==:%@",arr);
+                
+                
+                
+                
+                
+                
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                
+            }];
+ 
+        }
         
     }
 
