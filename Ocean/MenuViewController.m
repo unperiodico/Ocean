@@ -13,6 +13,15 @@
 #import "NavigationController.h"
 
 
+
+#import <ShareSDK/ShareSDK.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+#import <TencentOpenAPI/TencentOAuth.h>
+#import "WXApi.h"
+#import "WeiboApi.h"
+#import "WeiboSDK.h"
+#import <RennSDK/RennSDK.h>
+
 @interface MenuViewController ()
 
 @end
@@ -163,6 +172,43 @@
     
     
     else if(indexPath.section == 0 && indexPath.row == 1){
+        
+        
+        
+        
+        NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"海洋知识竞赛" ofType:@"png"];
+        
+        //构造分享内容
+        id<ISSContent> publishContent = [ShareSDK content:@"娱乐竞赛，玩手游、学知识，爱海洋，尽在海洋知识大赛，赶快来参加吧"
+                                           defaultContent:@"测试一下"
+                                                    image:[ShareSDK imageWithPath:imagePath]
+                                                    title:@"海洋知识竞赛"
+                                                      url:@"http://ahy.cz5u.com/HaiYangAPP.aspx"
+                                              description:@""
+                                                mediaType:SSPublishContentMediaTypeNews];
+        //创建弹出菜单容器
+        id<ISSContainer> container = [ShareSDK container];
+        [container setIPadContainerWithView:self.view arrowDirect:UIPopoverArrowDirectionUp];
+        
+        //弹出分享菜单
+        [ShareSDK showShareActionSheet:container
+                             shareList:nil
+                               content:publishContent
+                         statusBarTips:YES
+                           authOptions:nil
+                          shareOptions:nil
+                                result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
+                                    
+                                    if (state == SSResponseStateSuccess)
+                                    {
+                                        NSLog(NSLocalizedString(@"TEXT_ShARE_SUC", @"分享成功"));
+                                    }
+                                    else if (state == SSResponseStateFail)
+                                    {
+                                        NSLog(NSLocalizedString(@"TEXT_ShARE_FAI", @"分享失败,错误码:%d,错误描述:%@"), [error errorCode], [error errorDescription]);
+                                    }
+                                }];
+        
         
     }
 

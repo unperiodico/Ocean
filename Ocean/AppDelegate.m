@@ -10,6 +10,18 @@
 
 #import <AFHTTPRequestOperationManager.h>
 #import <AFNetworkReachabilityManager.h>
+
+
+
+#import <ShareSDK/ShareSDK.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+#import <TencentOpenAPI/TencentOAuth.h>
+#import "WXApi.h"
+#import "WeiboApi.h"
+#import "WeiboSDK.h"
+#import <RennSDK/RennSDK.h>
+
+
 @interface AppDelegate ()
 
 @end
@@ -21,6 +33,59 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    
+    
+    [ShareSDK registerApp:@"617d5f809a84"];//字符串api20为您的ShareSDK的AppKey
+    
+    //添加新浪微博应用 注册网址 http://open.weibo.com
+    [ShareSDK connectSinaWeiboWithAppKey:@"568898243"
+                               appSecret:@"38a4f8204cc784f81f9f0daaf31e02e3"
+                             redirectUri:@"http://www.sharesdk.cn"];
+    //当使用新浪微博客户端分享的时候需要按照下面的方法来初始化新浪的平台
+    [ShareSDK  connectSinaWeiboWithAppKey:@"568898243"
+                                appSecret:@"38a4f8204cc784f81f9f0daaf31e02e3"
+                              redirectUri:@"http://www.sharesdk.cn"
+                              weiboSDKCls:[WeiboSDK class]];
+    
+    //添加腾讯微博应用 注册网址 http://dev.t.qq.com
+    [ShareSDK connectTencentWeiboWithAppKey:@"801307650"
+                                  appSecret:@"ae36f4ee3946e1cbb98d6965b0b2ff5c"
+                                redirectUri:@"http://www.sharesdk.cn"
+                                   wbApiCls:[WeiboApi class]];
+    
+    //添加QQ空间应用  注册网址  http://connect.qq.com/intro/login/
+    [ShareSDK connectQZoneWithAppKey:@"100371282"
+                           appSecret:@"aed9b0303e3ed1e27bae87c33761161d"
+                   qqApiInterfaceCls:[QQApiInterface class]
+                     tencentOAuthCls:[TencentOAuth class]];
+    
+    //添加QQ应用  注册网址  http://open.qq.com/
+    [ShareSDK connectQQWithQZoneAppKey:@"100371282"
+                     qqApiInterfaceCls:[QQApiInterface class]
+                       tencentOAuthCls:[TencentOAuth class]];
+    
+    //添加微信应用 注册网址 http://open.weixin.qq.com
+    [ShareSDK connectWeChatWithAppId:@"wx4868b35061f87885"
+                           wechatCls:[WXApi class]];
+    //微信登陆的时候需要初始化
+    [ShareSDK connectWeChatWithAppId:@"wx5c67817435506c54"
+                           appSecret:@"4b67a8bd1b90e3338c815ca645fe28bf"
+                           wechatCls:[WXApi class]];
+    
+    
+    //添加人人网应用 注册网址  http://dev.renren.com
+    [ShareSDK connectRenRenWithAppId:@"226427"
+                              appKey:@"fc5b8aed373c4c27a05b712acba0f8c3"
+                           appSecret:@"f29df781abdd4f49beca5a2194676ca4"
+                   renrenClientClass:[RennClient class]];
+    
+    
+    
+    
+    
+    
+    
+    
     //检测网络状态
     
     NSURL *baseURL = [NSURL URLWithString:@"http://www.baidu.com/"];
@@ -55,6 +120,24 @@
 -(NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
 {
     return UIInterfaceOrientationMaskPortrait;
+}
+
+- (BOOL)application:(UIApplication *)application
+      handleOpenURL:(NSURL *)url
+{
+    return [ShareSDK handleOpenURL:url
+                        wxDelegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    return [ShareSDK handleOpenURL:url
+                 sourceApplication:sourceApplication
+                        annotation:annotation
+                        wxDelegate:self];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
