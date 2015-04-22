@@ -176,7 +176,7 @@
         
         
         
-        NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"海洋知识竞赛" ofType:@"png"];
+        NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"icon521" ofType:@"png"];
         
         //构造分享内容
         id<ISSContent> publishContent = [ShareSDK content:@"娱乐竞赛，玩手游、学知识，爱海洋，尽在海洋知识大赛，赶快来参加吧"
