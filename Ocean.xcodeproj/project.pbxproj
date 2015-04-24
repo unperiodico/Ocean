@@ -77,6 +77,14 @@
 		C3CCA5BD1AE49366005F04E1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CCA5BC1AE49366005F04E1 /* MessageUI.framework */; };
 		C3CCA5BF1AE49378005F04E1 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CCA5BE1AE49378005F04E1 /* libstdc++.dylib */; };
 		C3CCA5C11AE49383005F04E1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CCA5C01AE49383005F04E1 /* libsqlite3.dylib */; };
+		C3D782BC1AE876EE004D6D66 /* libPushSDK-1.8.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D782BB1AE876EE004D6D66 /* libPushSDK-1.8.3.a */; };
+		C3D782BE1AE8772E004D6D66 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D782BD1AE8772E004D6D66 /* CFNetwork.framework */; };
+		C3D782C01AE8773E004D6D66 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D782BF1AE8773E004D6D66 /* CoreFoundation.framework */; };
+		C3D782C21AE877A9004D6D66 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D782C11AE877A9004D6D66 /* CoreGraphics.framework */; };
+		C3D782C41AE877BC004D6D66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D782C31AE877BC004D6D66 /* Foundation.framework */; };
+		C3D782C61AE877C4004D6D66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D782C51AE877C4004D6D66 /* UIKit.framework */; };
+		C3D782C81AE877D9004D6D66 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D782C71AE877D9004D6D66 /* libz.dylib */; };
+		C3D782CA1AE878BB004D6D66 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3D782C91AE878BB004D6D66 /* PushConfig.plist */; };
 		D4871C0E7E10BFF6868AEF92 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 781783F52B5E0D72B1450935 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -199,6 +207,15 @@
 		C3CCA5BC1AE49366005F04E1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		C3CCA5BE1AE49378005F04E1 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		C3CCA5C01AE49383005F04E1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		C3D782BA1AE876EE004D6D66 /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APService.h; sourceTree = "<group>"; };
+		C3D782BB1AE876EE004D6D66 /* libPushSDK-1.8.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPushSDK-1.8.3.a"; sourceTree = "<group>"; };
+		C3D782BD1AE8772E004D6D66 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C3D782BF1AE8773E004D6D66 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		C3D782C11AE877A9004D6D66 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C3D782C31AE877BC004D6D66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C3D782C51AE877C4004D6D66 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C3D782C71AE877D9004D6D66 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		C3D782C91AE878BB004D6D66 /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
 		D38E1A000D88828E7FE53991 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,18 +224,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3D782C81AE877D9004D6D66 /* libz.dylib in Frameworks */,
+				C3CCA5B51AE49302005F04E1 /* Security.framework in Frameworks */,
+				C3D782C61AE877C4004D6D66 /* UIKit.framework in Frameworks */,
+				C3D782C41AE877BC004D6D66 /* Foundation.framework in Frameworks */,
+				C3D782C21AE877A9004D6D66 /* CoreGraphics.framework in Frameworks */,
+				C3CCA5AB1AE492B6005F04E1 /* SystemConfiguration.framework in Frameworks */,
+				C3CCA5AF1AE492D2005F04E1 /* CoreTelephony.framework in Frameworks */,
+				C3D782C01AE8773E004D6D66 /* CoreFoundation.framework in Frameworks */,
+				C3D782BE1AE8772E004D6D66 /* CFNetwork.framework in Frameworks */,
 				C3CCA5C11AE49383005F04E1 /* libsqlite3.dylib in Frameworks */,
 				C3CCA5BF1AE49378005F04E1 /* libstdc++.dylib in Frameworks */,
 				C3CCA5BD1AE49366005F04E1 /* MessageUI.framework in Frameworks */,
 				C3CCA5BB1AE49358005F04E1 /* Accounts.framework in Frameworks */,
 				C3CCA5B91AE4934D005F04E1 /* Social.framework in Frameworks */,
 				C3CCA5B71AE49338005F04E1 /* ImageIO.framework in Frameworks */,
-				C3CCA5B51AE49302005F04E1 /* Security.framework in Frameworks */,
 				C3CCA5B31AE492F4005F04E1 /* libz.1.2.5.dylib in Frameworks */,
 				C3CCA5B11AE492E2005F04E1 /* libicucore.dylib in Frameworks */,
-				C3CCA5AF1AE492D2005F04E1 /* CoreTelephony.framework in Frameworks */,
 				C3CCA5AD1AE492C1005F04E1 /* QuartzCore.framework in Frameworks */,
-				C3CCA5AB1AE492B6005F04E1 /* SystemConfiguration.framework in Frameworks */,
 				D4871C0E7E10BFF6868AEF92 /* libPods.a in Frameworks */,
 				C3CCA59E1AE4923F005F04E1 /* TencentOpenAPI.framework in Frameworks */,
 				C3CCA5A51AE4923F005F04E1 /* libWeChatSDK.a in Frameworks */,
@@ -238,6 +261,7 @@
 				C3CCA5A41AE4923F005F04E1 /* libTCWeiboSDK.a in Frameworks */,
 				C3CCA5A11AE4923F005F04E1 /* RennSDK.framework in Frameworks */,
 				C3CCA5991AE4923F005F04E1 /* WeChatConnection.framework in Frameworks */,
+				C3D782BC1AE876EE004D6D66 /* libPushSDK-1.8.3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +286,7 @@
 		01AB00BE1ADBAF1E00D37D63 = {
 			isa = PBXGroup;
 			children = (
+				C3D782B91AE876EE004D6D66 /* lib */,
 				C3CCA5691AE4923F005F04E1 /* ShareSDK */,
 				01AB00C91ADBAF1E00D37D63 /* Ocean */,
 				01AB00E61ADBAF1E00D37D63 /* OceanTests */,
@@ -305,6 +330,7 @@
 			children = (
 				01AB00CB1ADBAF1E00D37D63 /* Info.plist */,
 				01AB00CC1ADBAF1E00D37D63 /* main.m */,
+				C3D782C91AE878BB004D6D66 /* PushConfig.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -346,6 +372,12 @@
 		326C088FFA421475664F50B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3D782C71AE877D9004D6D66 /* libz.dylib */,
+				C3D782C51AE877C4004D6D66 /* UIKit.framework */,
+				C3D782C31AE877BC004D6D66 /* Foundation.framework */,
+				C3D782C11AE877A9004D6D66 /* CoreGraphics.framework */,
+				C3D782BF1AE8773E004D6D66 /* CoreFoundation.framework */,
+				C3D782BD1AE8772E004D6D66 /* CFNetwork.framework */,
 				C3CCA5C01AE49383005F04E1 /* libsqlite3.dylib */,
 				C3CCA5BE1AE49378005F04E1 /* libstdc++.dylib */,
 				C3CCA5BC1AE49366005F04E1 /* MessageUI.framework */,
@@ -558,6 +590,15 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		C3D782B91AE876EE004D6D66 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				C3D782BA1AE876EE004D6D66 /* APService.h */,
+				C3D782BB1AE876EE004D6D66 /* libPushSDK-1.8.3.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -609,6 +650,7 @@
 				TargetAttributes = {
 					01AB00C61ADBAF1E00D37D63 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = V3EA55SXYK;
 					};
 					01AB00E21ADBAF1E00D37D63 = {
 						CreatedOnToolsVersion = 6.3;
@@ -653,6 +695,7 @@
 				C3CCA59B1AE4923F005F04E1 /* ShareSDKLocalizable.strings in Resources */,
 				C3CCA5A71AE4923F005F04E1 /* ShareSDKFlatShareViewUI.bundle in Resources */,
 				C3CCA59C1AE4923F005F04E1 /* Resource.bundle in Resources */,
+				C3D782CA1AE878BB004D6D66 /* PushConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -858,6 +901,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShareSDK/Connection",
@@ -875,8 +920,12 @@
 					"$(PROJECT_DIR)/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/ShareSDK/Extend/TencentWeiboSDK",
 					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
+					"$(PROJECT_DIR)/lib",
+					"$(SRCROOT)/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/lib";
 			};
 			name = Debug;
 		};
@@ -886,6 +935,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShareSDK/Connection",
@@ -903,8 +954,12 @@
 					"$(PROJECT_DIR)/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/ShareSDK/Extend/TencentWeiboSDK",
 					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
+					"$(PROJECT_DIR)/lib",
+					"$(SRCROOT)/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/lib";
 			};
 			name = Release;
 		};
