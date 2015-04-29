@@ -10,7 +10,7 @@
 #import "REFrostedViewController.h"
 #import "UIDefine.h"
 
-@interface CommunityViewController : UIViewController<UIScrollViewDelegate>
+@interface CommunityViewController : UIViewController<UIScrollViewDelegate,UIAlertViewDelegate>
 
 @property(strong,nonatomic) UIScrollView *sView;
 @property(strong,nonatomic) UIPageControl *pageControl;

@@ -13,7 +13,7 @@
 #import "ShouYouViewController.h"
 #import "ZhiShiViewController.h"
 #import "ShanghuViewController.h"
-@interface ActivityViewController : UIViewController
+@interface ActivityViewController : UIViewController<UIAlertViewDelegate>
 {
     ShouYouViewController *_shouyou;
     ZhiShiViewController *_zhishi;

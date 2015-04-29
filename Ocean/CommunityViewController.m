@@ -15,6 +15,22 @@
 
 @implementation CommunityViewController
 
+-(void)viewDidAppear:(BOOL)animated{
+    
+    
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    
+    if ([[defaults objectForKey:@"agreement"] isEqualToString:@"no"]) {
+        //
+        UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:@"是否遵守参赛条款？" message:@"客服电话:010-51438222" delegate:self cancelButtonTitle:@"是" otherButtonTitles:@"否", nil];
+        
+        [alertview show];
+        
+        
+    };
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -254,6 +270,21 @@
     AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     
     appDelegate.tabbarLastTimeSelectedIndex =self.tabBarController.selectedIndex;
+}
+
+//alertView的回调方法
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    //    遵守
+    if (buttonIndex==0) {
+        
+        NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+        [defaults setObject:@"yes" forKey:@"agreement"];
+    }//不遵守
+    else{
+        
+        self.tabBarController.selectedIndex=0;
+    }
 }
 
 @end
