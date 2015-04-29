@@ -21,7 +21,7 @@
     
     if ([[defaults objectForKey:@"agreement"] isEqualToString:@"no"]) {
         //
-        UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:@"是否遵守参赛条款？" message:@"客服电话:010-51438222" delegate:self cancelButtonTitle:@"是" otherButtonTitles:@"否", nil];
+        UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:@"是否遵守参赛条款？" message:@"1、参与者必须年满6岁并且身体健康；\n2、最终获奖者需要身份和年龄验证；\n3、奖品是海洋纪念品，请关注官网；\n4、苹果公司与本次活动没有任何关系；\n5、主办方对游戏参与者和比赛情况有最终的解释和决定权。\n\n主办方：\n北京爱海洋文化传播有限公司\n（宣）" delegate:self cancelButtonTitle:@"是" otherButtonTitles:@"否", nil];
         
         [alertview show];
         
