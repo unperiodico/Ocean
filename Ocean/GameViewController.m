@@ -113,81 +113,22 @@
 {
     UIView *headView=[[UIView alloc]init];
     headView.frame=CGRectMake(0, 0, SelfView_W, 175);//150
-    _sView=[[UIScrollView alloc]init];
-    _sView.delegate=self;
-    
-    _sView.frame=CGRectMake(0, 0, SelfView_W, 75);//150
-    
-    _sView.contentSize=CGSizeMake(SelfView_W*2, 0);
-    
-    _sView.backgroundColor=[UIColor whiteColor];
-    
-    //分页
-    _sView.pagingEnabled=YES;
-    
-    //取消反弹效果
-    _sView.bounces=NO;
-    
-    //隐藏滚动条
-    _sView.showsHorizontalScrollIndicator=NO;
     
     
-    [headView addSubview:_sView];
+    UIImageView *lianjietu=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SelfView_W, 75)];
     
-    _pageControl=[[UIPageControl alloc]initWithFrame:CGRectMake((SelfView_W-20)/2, 60, 30, 20)];//2  130
+    lianjietu.image=[UIImage imageNamed:@"连接图"];
     
-    _pageControl.numberOfPages=2;
-    _pageControl.currentPageIndicatorTintColor=[UIColor blackColor];//选中颜色
-    _pageControl.pageIndicatorTintColor=[UIColor grayColor];//默认颜色
     
-    [headView addSubview:_pageControl];
+    //创建点击手势
+    UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGesture:)];
+    lianjietu.userInteractionEnabled=YES;
     
-    NSArray *arr=@[@"拯救鲸鱼",@"围住海盗王",@"蓝海卫士",@"蛟龙入海",@"冰雪王国",@"认识岛屿",@"大家来挑战"];
+    [lianjietu addGestureRecognizer:tapGesture];
+    
+    [headView addSubview:lianjietu];
+    
 
-    
-    for (int i=0; i<arr.count; i++) {
-        UIImageView *img=[[UIImageView alloc]init];
-        
-        UILabel *label=[[UILabel alloc]init];
-        
-        if (i>7) {
-            
-            img.frame=CGRectMake((SelfView_W/4-40)/2*(i-7)+(i-8)*(40+(SelfView_W/4-40)/2), 70, 40, 40);
-            
-            label.frame=CGRectMake(SelfView_W/4*(i-8), 108, SelfView_W/4, 30);
-            
-            
-        }else{
-            
-            img.frame=CGRectMake((SelfView_W/4-40)/2*(i+1)+i*(40+(SelfView_W/4-40)/2), 3, 40, 40);
-            
-            label.frame=CGRectMake(SelfView_W/4*i, img.frame.size.height, SelfView_W/4, 30);
-            
-        }
-        
-        img.tag=i+1;
-        img.layer.cornerRadius=img.frame.size.width / 2;
-        img.clipsToBounds=YES;
-        img.image=[UIImage imageNamed:arr[i]];
-        //允许用户交互
-        img.userInteractionEnabled=YES;
-        
-        [_sView addSubview:img];
-        
-        label.textAlignment=NSTextAlignmentCenter;
-        
-        label.font=[UIFont systemFontOfSize:13];
-        label.text=arr[i];
-        img.tag=i;
-        
-        [_sView addSubview:label];
-        
-        //创建点击手势
-        UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGesture:)];
-        
-        [img addGestureRecognizer:tapGesture];
-        
-    }
     
     
     
@@ -280,47 +221,7 @@
 //进入游戏下载
 -(void)tapGesture:(UITapGestureRecognizer*)tap
 {
-    UIImageView *imageView = (UIImageView*)[tap view];
-    
-    NSArray *linkArr=@[@"https://itunes.apple.com/cn/app/zheng-jiu-jing-yu/id981062251?mt=8",
-                       @"https://itunes.apple.com/cn/app/wei-zhu-hai-dao-wang/id981068868?mt=8",
-                       @"https://itunes.apple.com/cn/app/lan-hai-wei-shi/id980454839?mt=8",
-                       @"https://itunes.apple.com/cn/app/jiao-long-ru-hai/id981791615?mt=8",
-                       @"https://itunes.apple.com/cn/app/bing-xue-wang-guo/id981047950?mt=8",
-                       @"https://itunes.apple.com/cn/app/ren-shi-dao-yu/id981020696?mt=8",
-                       @"https://itunes.apple.com/cn/app/da-jia-lai-tiao-zhan/id981036547?mt=8"];
-    
-    
-    switch ((long)imageView.tag) {
-        case 0:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkArr[0]]];
-            break;
-            
-        case 1:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkArr[1]]];
-            break;
-        case 2:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkArr[2]]];
-            break;
-        case 3:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkArr[3]]];
-            break;
-        case 4:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkArr[4]]];
-            break;
-        case 5:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkArr[5]]];
-            break;
-        case 6:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkArr[6]]];
-            break;
-        case 7:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkArr[7]]];
-            break;
-        default:
-            break;
-    }
-    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://ocean.cz5u.com"]];
 }
 //冠军简介
 -(void)tapGesture1:(UITapGestureRecognizer*)tap
