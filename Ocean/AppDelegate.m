@@ -49,11 +49,11 @@
 //                              redirectUri:@"http://www.sharesdk.cn"
 //                              weiboSDKCls:[WeiboSDK class]];
     
-    //添加腾讯微博应用 注册网址 http://dev.t.qq.com
-    [ShareSDK connectTencentWeiboWithAppKey:@"801307650"
-                                  appSecret:@"ae36f4ee3946e1cbb98d6965b0b2ff5c"
-                                redirectUri:@"http://www.sharesdk.cn"
-                                   wbApiCls:[WeiboApi class]];
+//    //添加腾讯微博应用 注册网址 http://dev.t.qq.com
+//    [ShareSDK connectTencentWeiboWithAppKey:@"801307650"
+//                                  appSecret:@"ae36f4ee3946e1cbb98d6965b0b2ff5c"
+//                                redirectUri:@"http://www.sharesdk.cn"
+//                                   wbApiCls:[WeiboApi class]];
     
     //添加QQ空间应用  注册网址  http://connect.qq.com/intro/login/
     [ShareSDK connectQZoneWithAppKey:@"1104569708"
@@ -75,11 +75,11 @@
                            wechatCls:[WXApi class]];
     
     
-    //添加人人网应用 注册网址  http://dev.renren.com
-    [ShareSDK connectRenRenWithAppId:@"226427"
-                              appKey:@"fc5b8aed373c4c27a05b712acba0f8c3"
-                           appSecret:@"f29df781abdd4f49beca5a2194676ca4"
-                   renrenClientClass:[RennClient class]];
+//    //添加人人网应用 注册网址  http://dev.renren.com
+//    [ShareSDK connectRenRenWithAppId:@"226427"
+//                              appKey:@"fc5b8aed373c4c27a05b712acba0f8c3"
+//                           appSecret:@"f29df781abdd4f49beca5a2194676ca4"
+//                   renrenClientClass:[RennClient class]];
     
     
     
