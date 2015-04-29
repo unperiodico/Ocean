@@ -21,6 +21,11 @@
     //根据是否登陆,显示不同的Menu
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     
+    if (![[defaults objectForKey:@"agreement"] isEqualToString:@"yes"]) {
+            [defaults setObject:@"no" forKey:@"agreement"];
+    }
+
+    
     if ([defaults objectForKey:@"UserID"]==nil) {
         self.menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"entryController"];
     }
