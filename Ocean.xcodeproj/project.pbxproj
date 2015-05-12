@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0134F07D1B01D36500DC6526 /* ShangChengViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0134F07C1B01D36500DC6526 /* ShangChengViewController.m */; };
 		01471A831ADF3FA10001B2FD /* PostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01471A821ADF3FA10001B2FD /* PostDetailViewController.m */; };
 		01471A891ADF403C0001B2FD /* PostListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01471A881ADF403C0001B2FD /* PostListViewController.m */; };
 		014802051AE0A7F700BD89E7 /* BGRadioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 014802041AE0A7F700BD89E7 /* BGRadioView.m */; };
@@ -99,6 +100,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0134F07B1B01D36500DC6526 /* ShangChengViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShangChengViewController.h; sourceTree = "<group>"; };
+		0134F07C1B01D36500DC6526 /* ShangChengViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShangChengViewController.m; sourceTree = "<group>"; };
 		01471A811ADF3FA10001B2FD /* PostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDetailViewController.h; sourceTree = "<group>"; };
 		01471A821ADF3FA10001B2FD /* PostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDetailViewController.m; sourceTree = "<group>"; };
 		01471A871ADF403C0001B2FD /* PostListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostListViewController.h; sourceTree = "<group>"; };
@@ -365,6 +368,8 @@
 				C37FEF3B1ADF49CE005D5B32 /* MyCell.h */,
 				C37FEF3C1ADF49CE005D5B32 /* MyCell.m */,
 				C37FEF3D1ADF49CE005D5B32 /* MyCell.xib */,
+				0134F07B1B01D36500DC6526 /* ShangChengViewController.h */,
+				0134F07C1B01D36500DC6526 /* ShangChengViewController.m */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -772,6 +777,7 @@
 				C3C1AB081ADE586100BE329D /* CCSegmentedControl.m in Sources */,
 				014FE73D1ADE48190082167F /* EntryViewController.m in Sources */,
 				C3C64A841ADFD12F005BF4CF /* GuanYuAHYViewController.m in Sources */,
+				0134F07D1B01D36500DC6526 /* ShangChengViewController.m in Sources */,
 				C3C1AB0E1ADE680A00BE329D /* ShanghuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

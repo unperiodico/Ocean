@@ -192,6 +192,7 @@
                         <segue destination="Lpu-bZ-aKf" kind="modal" identifier="toUserController" modalTransitionStyle="crossDissolve" id="oLy-jc-7d4"/>
                         <segue destination="Hx5-Yg-NJP" kind="modal" identifier="logout" modalTransitionStyle="crossDissolve" id="MN7-OB-meL"/>
                         <segue destination="ysD-wa-h1B" kind="modal" identifier="toGY" modalTransitionStyle="crossDissolve" id="tpN-Ep-FrE"/>
+                        <segue destination="li7-oO-peb" kind="modal" identifier="toShangCheng" modalTransitionStyle="crossDissolve" id="gkE-CW-bLK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kh6-k6-x34" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -304,7 +305,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="212" sectionHeaderHeight="10" sectionFooterHeight="10" id="zwm-u0-AY5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell00" rowHeight="212" id="nIi-Xf-cEr">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -596,7 +597,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="7Qx-vp-c0m">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Fd7-fC-7q5" rowHeight="43" style="IBUITableViewCellStyleDefault" id="ZAZ-bh-IrX">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -606,7 +607,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fd7-fC-7q5">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -721,6 +722,58 @@
             </objects>
             <point key="canvasLocation" x="3586" y="546"/>
         </scene>
+        <!--商城-->
+        <scene sceneID="gbN-co-Un1">
+            <objects>
+                <viewController id="fUt-5X-jpp" customClass="ShangChengViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iR6-uZ-O2g"/>
+                        <viewControllerLayoutGuide type="bottom" id="ywO-iP-LnL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Yo-bg-pWc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="商城" id="YEY-nx-lxe">
+                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="6V0-3l-8bW">
+                            <connections>
+                                <segue destination="Hx5-Yg-NJP" kind="modal" modalTransitionStyle="crossDissolve" id="ag7-Xq-gYn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBK-WB-uJn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061" y="-98"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CcR-rJ-0ge">
+            <objects>
+                <navigationController storyboardIdentifier="navigationController_SC" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="li7-oO-peb" customClass="NavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="RkW-qc-jE3"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fef-NP-qNH">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.93333339689999995" green="0.1411764771" blue="0.39607846740000002" alpha="1" colorSpace="deviceRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="23"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="MqT-2S-cYT">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="fUt-5X-jpp" kind="relationship" relationship="rootViewController" id="NRk-1r-yge"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ppi-UE-FBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1497" y="-98"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Activity" width="33" height="33"/>
@@ -733,6 +786,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="g36-ns-aG2"/>
+        <segue reference="ag7-Xq-gYn"/>
     </inferredMetricsTieBreakers>
 </document>
