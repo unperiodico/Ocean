@@ -52,15 +52,10 @@
         zView.backgroundColor=[UIColor groupTableViewBackgroundColor];
         [_sView addSubview:zView];
     }
-//
-    
-    
+
     _sView.contentSize=CGSizeMake(0, _js*150+_js*10);
     
     _sView.backgroundColor=[UIColor whiteColor];
-    
-    //分页
-//    _sView.pagingEnabled=YES;
     
     //取消反弹效果
     _sView.bounces=NO;
@@ -70,10 +65,6 @@
     
     
     [self.view addSubview:_sView];
-    
-
-    
-    
     
 }
 

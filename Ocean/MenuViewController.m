@@ -40,7 +40,7 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableHeaderView = ({
         //tableView上方的空间
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 184.0f)];
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 230.0f)];
         //头像图片
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(88, 40, 100, 100)];
         //如果需要自适应
@@ -69,8 +69,15 @@
 //        [avatarButton setBackgroundColor:[UIColor blackColor]];
         [avatarButton addTarget:self action:@selector(avatarButtonAction:) forControlEvents:UIControlEventTouchUpInside];
 
+        //vip
+        UIImageView *vip=[[UIImageView alloc]initWithFrame:CGRectMake(125, 145, 24, 24)];
+        vip.image=[UIImage imageNamed:@"vip"];
+        
+        [view addSubview:vip];
+        
+        
         //用户名
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(58, 150, 160, 24)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(58, 175, 160, 24)];
 
         NSString *name=[defaults objectForKey:@"zhmName"];
         NSLog(@"%@",name);
@@ -83,6 +90,18 @@
         //刚好容纳文字
 //        [label sizeToFit];
 
+        UIImageView *qian=[[UIImageView alloc]initWithFrame:CGRectMake(95, 205, 20, 20)];
+        qian.image=[UIImage imageNamed:@"qian"];
+        
+        [view addSubview:qian];
+        
+        UILabel *haibi=[[UILabel alloc]initWithFrame:CGRectMake(115, 205, 160, 20)];
+        haibi.text=@"231243";
+        haibi.font=[UIFont boldSystemFontOfSize:13];
+        
+        
+        
+        [view addSubview:haibi];
         
         [view addSubview:imageView];
         [view addSubview:label];
