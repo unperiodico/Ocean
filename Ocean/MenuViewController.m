@@ -70,14 +70,14 @@
         [avatarButton addTarget:self action:@selector(avatarButtonAction:) forControlEvents:UIControlEventTouchUpInside];
 
         //vip
-        UIImageView *vip=[[UIImageView alloc]initWithFrame:CGRectMake(125, 145, 24, 24)];
-        vip.image=[UIImage imageNamed:@"vip"];
-        
-        [view addSubview:vip];
+//        UIImageView *vip=[[UIImageView alloc]initWithFrame:CGRectMake(125, 145, 24, 24)];
+//        vip.image=[UIImage imageNamed:@"vip"];
+//        
+//        [view addSubview:vip];
         
         
         //用户名
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(58, 175, 160, 24)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(58, 145, 160, 24)];//175
 
         NSString *name=[defaults objectForKey:@"zhmName"];
         NSLog(@"%@",name);
@@ -90,12 +90,12 @@
         //刚好容纳文字
 //        [label sizeToFit];
 
-        UIImageView *qian=[[UIImageView alloc]initWithFrame:CGRectMake(95, 205, 20, 20)];
+        UIImageView *qian=[[UIImageView alloc]initWithFrame:CGRectMake(95, 175, 20, 20)];//205
         qian.image=[UIImage imageNamed:@"qian"];
         
         [view addSubview:qian];
         
-        UILabel *haibi=[[UILabel alloc]initWithFrame:CGRectMake(115, 205, 160, 20)];
+        UILabel *haibi=[[UILabel alloc]initWithFrame:CGRectMake(115, 175, 160, 20)];//205
         haibi.text=@"231243";
         haibi.font=[UIFont boldSystemFontOfSize:13];
         
