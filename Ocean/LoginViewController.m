@@ -142,47 +142,76 @@
                 NSString *UID=[dic objectForKey:@"UserId"];
                 [defaults setObject:UID forKey:@"UserID"];
                 
-                NSString *url=[NSString stringWithFormat:@"http://ahy.cz5u.com/HaiYangBBSService.asmx/UserInfo?userId=%@",UID];
+//                NSString *str=@"http://ahy.cz5u.com/HaiYangBBSService.asmx/SelGold?UserId=23750";
                 
-                [openmanger GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                NSString *urlstr=[NSString stringWithFormat:@"http://ahy.cz5u.com/HaiYangBBSService.asmx/SelGold?UserId=%@",UID];
+                
+                [openmanger GET:urlstr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                    NSArray *arr4=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
                     
-                    NSArray *arr1=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-                    NSLog(@"33==:%@",arr1);
-                    NSDictionary *diction=(NSDictionary*)arr1[0];
-                    NSString *yhm=[diction objectForKey:@"UserName"];
-                    [defaults setObject:yhm forKey:@"yhmName"];
-                    NSString *mima=[diction objectForKey:@"UserPass"];
-                    [defaults setObject:mima forKey:@"mmPass"];
+                    NSDictionary *dicti=(NSDictionary*)arr4[0];
+                    NSLog(@"%@",dicti);
                     
-                    NSString *str=[NSString stringWithFormat:@"http://ahy.cz5u.com/HeadImage/upload/2_%@",[diction objectForKey:@"HeadImage"]];
-                    [defaults setObject:str forKey:@"touxiang"];
+                    NSString *aaa=[dicti objectForKey:@"Gold"];
+                    NSLog(@"111==;%@",aaa);
+                    
+                   
                     
                     
                     
-                    if ([diction objectForKey:@"UserNickName"]==[NSNull null]) {
-                        NSString *zhmName=[diction objectForKey:@"UserName"];
-                        NSLog(@"%@",zhmName);
-                        [defaults setValue:zhmName forKey:@"zhmName"];
+                    NSString *url=[NSString stringWithFormat:@"http://ahy.cz5u.com/HaiYangBBSService.asmx/UserInfo?userId=%@",UID];
+                    
+                    [openmanger GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
                         
-                    }else{
-                        NSString *xgmName=[diction objectForKey:@"UserNickName"];
-                        NSLog(@"%@",xgmName);
-                        [defaults setValue:xgmName forKey:@"zhmName"];
-                    }
+                        NSArray *arr1=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+                        NSLog(@"33==:%@",arr1);
+                        NSDictionary *diction=(NSDictionary*)arr1[0];
+                        NSString *yhm=[diction objectForKey:@"UserName"];
+                        [defaults setObject:yhm forKey:@"yhmName"];
+                        NSString *mima=[diction objectForKey:@"UserPass"];
+                        [defaults setObject:mima forKey:@"mmPass"];
+                        
+                        NSString *str=[NSString stringWithFormat:@"http://ahy.cz5u.com/HeadImage/upload/2_%@",[diction objectForKey:@"HeadImage"]];
+                        [defaults setObject:str forKey:@"touxiang"];
+                        
+                        
+                        
+                        if ([diction objectForKey:@"UserNickName"]==[NSNull null]) {
+                            NSString *zhmName=[diction objectForKey:@"UserName"];
+                            NSLog(@"%@",zhmName);
+                            [defaults setValue:zhmName forKey:@"zhmName"];
+                            
+                        }else{
+                            NSString *xgmName=[diction objectForKey:@"UserNickName"];
+                            NSLog(@"%@",xgmName);
+                            [defaults setValue:xgmName forKey:@"zhmName"];
+                        }
+                        
+                        NSString *shouji=[diction objectForKey:@"UserPhone"];
+                        if ([diction objectForKey:@"UserPhone"] !=[NSNull null]) {
+                            [defaults setObject:shouji forKey:@"shouji"];
+                        }
+                        
+                        NSLog(@"%@,%@",yhm,mima);
+                        
+                        [self performSegueWithIdentifier:@"loginSuccess" sender:self];
+                        
+                    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                        
+                    }];
+
                     
-                    NSString *shouji=[diction objectForKey:@"UserPhone"];
-                    if ([diction objectForKey:@"UserPhone"] !=[NSNull null]) {
-                        [defaults setObject:shouji forKey:@"shouji"];
-                    }
                     
-                    NSLog(@"%@,%@",yhm,mima);
                     
-                    [self performSegueWithIdentifier:@"loginSuccess" sender:self];
                     
                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                     
                 }];
 
+                
+                
+                
+                
                 
                 
                 

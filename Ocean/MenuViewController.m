@@ -96,9 +96,13 @@
         [view addSubview:qian];
         
         UILabel *haibi=[[UILabel alloc]initWithFrame:CGRectMake(115, 175, 160, 20)];//205
-        haibi.text=@"231243";
-        haibi.font=[UIFont boldSystemFontOfSize:13];
         
+        NSString *asdad=[NSString stringWithFormat:@"海币：%@",[defaults objectForKey:@"jiabi"]];
+        NSLog(@"%@",asdad);
+        
+        haibi.text=asdad;
+        haibi.font=[UIFont boldSystemFontOfSize:13];
+
         
         
         [view addSubview:haibi];
