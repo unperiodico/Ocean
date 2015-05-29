@@ -40,7 +40,7 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableHeaderView = ({
         //tableView上方的空间
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 230.0f)];
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 200.0f)];
         //头像图片
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(88, 40, 100, 100)];
         //如果需要自适应

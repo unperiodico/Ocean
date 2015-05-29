@@ -8,6 +8,8 @@
 
 #import "ShangChengViewController.h"
 #import "UIDefine.h"
+#import "RongYuGuanViewController.h"
+#import "JiNianGuanViewController.h"
 @interface ShangChengViewController ()
 
 
@@ -30,7 +32,7 @@
         imgView.frame=CGRectMake(0, vw.frame.size.height/3*i, SelfView_W, vw.frame.size.height/3);
         imgView.image=[UIImage imageNamed:arr[i]];
         [vw addSubview:imgView];
-        
+        imgView.tag=100+i;
         //创建点击手势
         UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGesture:)];
         imgView.userInteractionEnabled=YES;
@@ -44,7 +46,20 @@
 
 -(void)tapGesture:(UITapGestureRecognizer*)tap
 {
-    NSLog(@"aaa");
+    UIImageView *img=(UIImageView*)tap.view;
+    
+    if (img.tag==100) {
+        RongYuGuanViewController *ryg=[[RongYuGuanViewController alloc]init];
+        [self.navigationController pushViewController:ryg animated:NO];
+        
+    }else if (img.tag==101){
+        JiNianGuanViewController *jng=[[JiNianGuanViewController alloc]init];
+        [self.navigationController pushViewController:jng animated:NO];
+    }else{
+        
+    }
+    
+    
 }
 
 @end

@@ -24,6 +24,9 @@
 
 #import "APService.h"
 
+#import <AlipaySDK/AlipaySDK.h>
+
+
 @interface AppDelegate ()
 
 @end
@@ -163,6 +166,22 @@
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation
 {
+    //支付返回
+    if ([url.host isEqualToString:@"safepay"]) {
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result1 = %@",resultDic);
+        }];
+        return YES;
+    }
+    if ([url.host isEqualToString:@"platformapi"]){//支付宝钱包快登授权返回 authCode
+        [[AlipaySDK defaultService] processAuthResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result2 = %@",resultDic);
+        }];
+        return YES;
+    }
+    
+    
+    
     return [ShareSDK handleOpenURL:url
                  sourceApplication:sourceApplication
                         annotation:annotation
@@ -313,5 +332,7 @@
         }
     }
 }
+
+
 
 @end

@@ -156,7 +156,7 @@
                     NSLog(@"111==;%@",aaa);
                     
                    
-                    
+                    [defaults setObject:aaa forKey:@"jiabi"];
                     
                     
                     NSString *url=[NSString stringWithFormat:@"http://ahy.cz5u.com/HaiYangBBSService.asmx/UserInfo?userId=%@",UID];
