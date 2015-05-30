@@ -23,10 +23,11 @@
     [super viewDidLoad];
     
     UIView *vw=[[UIView alloc]initWithFrame:CGRectMake(0, 65, SelfView_W, SelfView_H-65)];
-    vw.backgroundColor=[UIColor redColor];
+    vw.backgroundColor=[UIColor whiteColor];
     
     [self.view addSubview:vw];
-    NSArray *arr=@[@"rongyuguan.png",@"jinianguan.png",@"liwuguan.png"];
+//    NSArray *arr=@[@"rongyuguan.png",@"jinianguan.png",@"liwuguan.png"];
+    NSArray *arr=@[@"rongyuguan.png",@"",@""];
     for (int i=0; i<3; i++) {
         
         UIImageView *imgView=[[UIImageView alloc]init];
@@ -54,8 +55,8 @@
         [self.navigationController pushViewController:ryg animated:NO];
         
     }else if (img.tag==101){
-        JiNianGuanViewController *jng=[[JiNianGuanViewController alloc]init];
-        [self.navigationController pushViewController:jng animated:NO];
+//        JiNianGuanViewController *jng=[[JiNianGuanViewController alloc]init];
+//        [self.navigationController pushViewController:jng animated:NO];
     }else{
         
     }
