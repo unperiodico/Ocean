@@ -45,9 +45,24 @@
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(88, 40, 100, 100)];
         //如果需要自适应
 //        imageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
-        
-        
         NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+        
+        NSArray *xzimage=@[@"vp0.png",@"vp1.png",@"vp2.png",@"vp3.png",@"vp4.png",@"vp5.png"];
+        
+        NSString *xunzhang=[defaults objectForKey:@"xunzhangdengji"];
+        int intxz=[xunzhang intValue];
+        //勋章
+        UIImageView *xzimg=[[UIImageView alloc]init];
+        xzimg.frame=CGRectMake(195, 70, 40, 40);
+        
+        
+        xzimg.image=[UIImage imageNamed:xzimage[intxz]];
+        
+        
+        
+        [view addSubview:xzimg];
+        
+        
         
         NSURL *url=[NSURL URLWithString:[defaults objectForKey:@"touxiang"]];
         NSLog(@"%@",url);
@@ -74,6 +89,8 @@
 //        vip.image=[UIImage imageNamed:@"vip"];
 //        
 //        [view addSubview:vip];
+        
+        
         
         
         //用户名

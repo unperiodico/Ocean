@@ -11,7 +11,7 @@
 #import <AlipaySDK/AlipaySDK.h>
 #import "Order.h"
 #import "DataSigner.h"
-
+#import <AFNetworking.h>
 
 #define PartnerID @"2088911502597733"
 #define SellerID @"2355394546@qq.com"
@@ -53,19 +53,31 @@
 
 -(void)btClick:(UIButton*)bt
 {
-    
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     if (bt.tag==1) {
         _str=@"1";
+        NSString *czsl=_arr[bt.tag-1];
+        [defaults setObject:czsl forKey:@"chongzhishuliang"];
     }else if (bt.tag==2){
         _str=@"5";
+        NSString *czsl=_arr[bt.tag-1];
+        [defaults setObject:czsl forKey:@"chongzhishuliang"];
     }else if (bt.tag==3){
         _str=@"8";
+        NSString *czsl=_arr[bt.tag-1];
+        [defaults setObject:czsl forKey:@"chongzhishuliang"];
     }else if (bt.tag==4){
         _str=@"10";
+        NSString *czsl=_arr[bt.tag-1];
+        [defaults setObject:czsl forKey:@"chongzhishuliang"];
     }else if (bt.tag==5){
         _str=@"20";
+        NSString *czsl=_arr[bt.tag-1];
+        [defaults setObject:czsl forKey:@"chongzhishuliang"];
     }else{
         _str=@"50";
+        NSString *czsl=_arr[bt.tag-1];
+        [defaults setObject:czsl forKey:@"chongzhishuliang"];
     }
     
     UIAlertView *alertView=[[UIAlertView alloc]initWithTitle:@"应付金额(元)" message:_str delegate:self cancelButtonTitle:@"确定" otherButtonTitles:@"取消", nil];
@@ -130,8 +142,61 @@
                            orderSpec, signedString, @"RSA"];
             [[AlipaySDK defaultService]payOrder:orderString fromScheme:appScheme callback:^(NSDictionary *resultDic) {
                 NSLog(@"reslut = %@",resultDic);
-                
-                
+                NSString *sss=[resultDic objectForKey:@"resultStatus"];
+                if ([sss isEqualToString:@"9000"]) {
+                    NSLog(@"成功");
+                    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+                    NSString *UID=[defaults objectForKey:@"UserID"];
+                    NSString *sl=[defaults objectForKey:@"chongzhishuliang"];
+                    
+                    NSString *body=[NSString stringWithFormat:@"http://ahy.cz5u.com/HaiYangBBSService.asmx/AddGold?UserId=%@&mun=%@",UID,sl];
+                    
+                    
+                    AFHTTPRequestOperationManager *openmanger=[AFHTTPRequestOperationManager manager];
+                    openmanger.responseSerializer=[AFHTTPResponseSerializer serializer];
+                    [openmanger GET:body parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                        
+                        NSArray *arr=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+                        
+                        NSDictionary *dic=(NSDictionary *)arr[0];
+                        NSLog(@"%@",dic);
+                        
+                        if ([[dic objectForKey:@"Result"] isEqual:@"true"]) {
+                            
+                            NSString *urlstr=[NSString stringWithFormat:@"http://ahy.cz5u.com/HaiYangBBSService.asmx/SelGold?UserId=%@",UID];
+                            
+                            [openmanger GET:urlstr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                NSArray *arr4=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+                                
+                                NSDictionary *dicti=(NSDictionary*)arr4[0];
+                                NSLog(@"%@",dicti);
+                                
+                                NSString *aaa=[dicti objectForKey:@"Gold"];
+                                NSLog(@"111==;%@",aaa);
+                                
+                                
+                                [defaults setObject:aaa forKey:@"jiabi"];
+                                
+                                [self performSegueWithIdentifier:@"loginSuccess" sender:self];
+                                
+                            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                
+                            }];
+                            
+                        }
+                        
+                        
+                    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                        
+                    }];
+                    
+                    
+                }else{
+                    NSLog(@"失败");
+                    
+                    
+                    
+                }
             }];
             
             

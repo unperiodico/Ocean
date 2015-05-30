@@ -26,6 +26,11 @@
     
    self.navigationItem.title=@"商城";
     
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     self.view.backgroundColor=[UIColor whiteColor];
     
@@ -125,6 +130,8 @@
         [defaults setObject:tpName forKey:@"tpName"];
         NSString *tpJiage=_arr2[img.tag-100];
         [defaults setObject:tpJiage forKey:@"tpJiage"];
+        NSString *xz=@"0";
+        [defaults setObject:xz forKey:@"xzdengji"];
     }else if (img.tag==101){
         NSString *tpimg=_arr[img.tag-100];
         
@@ -133,7 +140,8 @@
         [defaults setObject:tpName forKey:@"tpName"];
         NSString *tpJiage=_arr2[img.tag-100];
         [defaults setObject:tpJiage forKey:@"tpJiage"];
-        
+        NSString *xz=@"1";
+        [defaults setObject:xz forKey:@"xzdengji"];
     }else if (img.tag==102){
         NSString *tpimg=_arr[img.tag-100];
         [defaults setObject:tpimg forKey:@"tpimg"];
@@ -141,6 +149,8 @@
         [defaults setObject:tpName forKey:@"tpName"];
         NSString *tpJiage=_arr2[img.tag-100];
         [defaults setObject:tpJiage forKey:@"tpJiage"];
+        NSString *xz=@"2";
+        [defaults setObject:xz forKey:@"xzdengji"];
     }else if (img.tag==103){
         NSString *tpimg=_arr[img.tag-100];
         [defaults setObject:tpimg forKey:@"tpimg"];
@@ -148,6 +158,8 @@
         [defaults setObject:tpName forKey:@"tpName"];
         NSString *tpJiage=_arr2[img.tag-100];
         [defaults setObject:tpJiage forKey:@"tpJiage"];
+        NSString *xz=@"3";
+        [defaults setObject:xz forKey:@"xzdengji"];
     }else if (img.tag==104){
         NSString *tpimg=_arr[img.tag-100];
         [defaults setObject:tpimg forKey:@"tpimg"];
@@ -155,6 +167,8 @@
         [defaults setObject:tpName forKey:@"tpName"];
         NSString *tpJiage=_arr2[img.tag-100];
         [defaults setObject:tpJiage forKey:@"tpJiage"];
+        NSString *xz=@"4";
+        [defaults setObject:xz forKey:@"xzdengji"];
     }else{
         NSString *tpimg=_arr[img.tag-100];
         [defaults setObject:tpimg forKey:@"tpimg"];
@@ -162,6 +176,8 @@
         [defaults setObject:tpName forKey:@"tpName"];
         NSString *tpJiage=_arr2[img.tag-100];
         [defaults setObject:tpJiage forKey:@"tpJiage"];
+        NSString *xz=@"5";
+        [defaults setObject:xz forKey:@"xzdengji"];
     }
     
     WuPinXiangQingViewController *wpxq=[[WuPinXiangQingViewController alloc]init];

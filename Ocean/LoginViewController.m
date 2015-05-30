@@ -194,7 +194,26 @@
                         
                         NSLog(@"%@,%@",yhm,mima);
                         
-                        [self performSegueWithIdentifier:@"loginSuccess" sender:self];
+                        
+                        NSString *xzUrl=[NSString stringWithFormat:@"http://ahy.cz5u.com/HaiYangBBSService.asmx/SelMedalRank?UserId=%@",UID];
+                        
+                        [openmanger GET:xzUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                            
+                            NSArray *xzArr=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+                            NSLog(@"33==:%@",xzArr);
+                            NSDictionary *xzdic=(NSDictionary*)xzArr[0];
+                            NSString *xzdj=[xzdic objectForKey:@"MedalRank"];
+                            NSLog(@"33==:%@",xzdj);
+                            [defaults setObject:xzdj forKey:@"xunzhangdengji"];
+                            
+                            
+                            [self performSegueWithIdentifier:@"loginSuccess" sender:self];
+
+                        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                            
+                        }];
+                        
+                        
                         
                     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                         
