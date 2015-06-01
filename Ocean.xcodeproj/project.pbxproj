@@ -105,6 +105,14 @@
 		C3D782C61AE877C4004D6D66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D782C51AE877C4004D6D66 /* UIKit.framework */; };
 		C3D782C81AE877D9004D6D66 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D782C71AE877D9004D6D66 /* libz.dylib */; };
 		C3D782CA1AE878BB004D6D66 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3D782C91AE878BB004D6D66 /* PushConfig.plist */; };
+		C3F206781B1C28F1002FB087 /* PaiHangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F206771B1C28F1002FB087 /* PaiHangViewController.m */; };
+		C3F2067C1B1C2A08002FB087 /* ZongBangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F2067B1B1C2A08002FB087 /* ZongBangViewController.m */; };
+		C3F2067F1B1C2A18002FB087 /* XiaoXueZuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F2067E1B1C2A18002FB087 /* XiaoXueZuViewController.m */; };
+		C3F206821B1C2A33002FB087 /* ZhongXueZuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F206811B1C2A33002FB087 /* ZhongXueZuViewController.m */; };
+		C3F206851B1C2A42002FB087 /* DaXueZuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F206841B1C2A42002FB087 /* DaXueZuViewController.m */; };
+		C3F206881B1C2A51002FB087 /* GongZhongZuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F206871B1C2A51002FB087 /* GongZhongZuViewController.m */; };
+		C3F2068F1B1C35CA002FB087 /* PaiHangCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F2068D1B1C35CA002FB087 /* PaiHangCell.m */; };
+		C3F206901B1C35CA002FB087 /* PaiHangCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F2068E1B1C35CA002FB087 /* PaiHangCell.xib */; };
 		D4871C0E7E10BFF6868AEF92 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 781783F52B5E0D72B1450935 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -348,6 +356,21 @@
 		C3D782C51AE877C4004D6D66 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3D782C71AE877D9004D6D66 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		C3D782C91AE878BB004D6D66 /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
+		C3F206761B1C28F1002FB087 /* PaiHangViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaiHangViewController.h; sourceTree = "<group>"; };
+		C3F206771B1C28F1002FB087 /* PaiHangViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaiHangViewController.m; sourceTree = "<group>"; };
+		C3F2067A1B1C2A08002FB087 /* ZongBangViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZongBangViewController.h; sourceTree = "<group>"; };
+		C3F2067B1B1C2A08002FB087 /* ZongBangViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZongBangViewController.m; sourceTree = "<group>"; };
+		C3F2067D1B1C2A18002FB087 /* XiaoXueZuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XiaoXueZuViewController.h; sourceTree = "<group>"; };
+		C3F2067E1B1C2A18002FB087 /* XiaoXueZuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XiaoXueZuViewController.m; sourceTree = "<group>"; };
+		C3F206801B1C2A33002FB087 /* ZhongXueZuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhongXueZuViewController.h; sourceTree = "<group>"; };
+		C3F206811B1C2A33002FB087 /* ZhongXueZuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhongXueZuViewController.m; sourceTree = "<group>"; };
+		C3F206831B1C2A42002FB087 /* DaXueZuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaXueZuViewController.h; sourceTree = "<group>"; };
+		C3F206841B1C2A42002FB087 /* DaXueZuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaXueZuViewController.m; sourceTree = "<group>"; };
+		C3F206861B1C2A51002FB087 /* GongZhongZuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GongZhongZuViewController.h; sourceTree = "<group>"; };
+		C3F206871B1C2A51002FB087 /* GongZhongZuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GongZhongZuViewController.m; sourceTree = "<group>"; };
+		C3F2068C1B1C35CA002FB087 /* PaiHangCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaiHangCell.h; sourceTree = "<group>"; };
+		C3F2068D1B1C35CA002FB087 /* PaiHangCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaiHangCell.m; sourceTree = "<group>"; };
+		C3F2068E1B1C35CA002FB087 /* PaiHangCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaiHangCell.xib; sourceTree = "<group>"; };
 		D38E1A000D88828E7FE53991 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -491,6 +514,7 @@
 		01C816F31ADD184D00AE2871 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				C3F206791B1C291E002FB087 /* 排行 */,
 				C3CD781A1B12F26E0014CE28 /* 商城 */,
 				C3C64A7F1ADFD12F005BF4CF /* GuanYuAHYViewController.h */,
 				C3C64A801ADFD12F005BF4CF /* GuanYuAHYViewController.m */,
@@ -878,6 +902,28 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		C3F206791B1C291E002FB087 /* 排行 */ = {
+			isa = PBXGroup;
+			children = (
+				C3F206761B1C28F1002FB087 /* PaiHangViewController.h */,
+				C3F206771B1C28F1002FB087 /* PaiHangViewController.m */,
+				C3F2067A1B1C2A08002FB087 /* ZongBangViewController.h */,
+				C3F2067B1B1C2A08002FB087 /* ZongBangViewController.m */,
+				C3F2067D1B1C2A18002FB087 /* XiaoXueZuViewController.h */,
+				C3F2067E1B1C2A18002FB087 /* XiaoXueZuViewController.m */,
+				C3F206801B1C2A33002FB087 /* ZhongXueZuViewController.h */,
+				C3F206811B1C2A33002FB087 /* ZhongXueZuViewController.m */,
+				C3F206831B1C2A42002FB087 /* DaXueZuViewController.h */,
+				C3F206841B1C2A42002FB087 /* DaXueZuViewController.m */,
+				C3F206861B1C2A51002FB087 /* GongZhongZuViewController.h */,
+				C3F206871B1C2A51002FB087 /* GongZhongZuViewController.m */,
+				C3F2068C1B1C35CA002FB087 /* PaiHangCell.h */,
+				C3F2068D1B1C35CA002FB087 /* PaiHangCell.m */,
+				C3F2068E1B1C35CA002FB087 /* PaiHangCell.xib */,
+			);
+			name = "排行";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -966,6 +1012,7 @@
 				01AB00D91ADBAF1E00D37D63 /* Main.storyboard in Resources */,
 				C3CD00DE1B18504800699762 /* AlipaySDK.bundle in Resources */,
 				C3C64A861ADFD12F005BF4CF /* GyahyCell.xib in Resources */,
+				C3F206901B1C35CA002FB087 /* PaiHangCell.xib in Resources */,
 				C3CA933F1AE0B8AC00911A49 /* ZhuCeViewController.xib in Resources */,
 				01AB00DB1ADBAF1E00D37D63 /* Images.xcassets in Resources */,
 				C3CCA5A01AE4923F005F04E1 /* RennSDK.bundle in Resources */,
@@ -1026,6 +1073,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F206821B1C2A33002FB087 /* ZhongXueZuViewController.m in Sources */,
+				C3F206881B1C2A51002FB087 /* GongZhongZuViewController.m in Sources */,
 				C3CD00E61B18504800699762 /* DataVerifier.m in Sources */,
 				C3C64A851ADFD12F005BF4CF /* GyahyCell.m in Sources */,
 				C3CD00E01B18504800699762 /* APAuthV2Info.m in Sources */,
@@ -1038,6 +1087,7 @@
 				C3CD781D1B12F28C0014CE28 /* RongYuGuanViewController.m in Sources */,
 				C3CD00EB1B18504800699762 /* RSADataVerifier.m in Sources */,
 				014802051AE0A7F700BD89E7 /* BGRadioView.m in Sources */,
+				C3F2068F1B1C35CA002FB087 /* PaiHangCell.m in Sources */,
 				C3CD00E41B18504800699762 /* base64.m in Sources */,
 				01F430D81ADBBC250034BC72 /* NavigationController.m in Sources */,
 				C33DFFA51ADD15FD00233DF2 /* YouXiCell.m in Sources */,
@@ -1048,9 +1098,11 @@
 				C3CD00E81B18504800699762 /* NSDataEx.m in Sources */,
 				01471A831ADF3FA10001B2FD /* PostDetailViewController.m in Sources */,
 				C3CD00EA1B18504800699762 /* RSADataSigner.m in Sources */,
+				C3F206851B1C2A42002FB087 /* DaXueZuViewController.m in Sources */,
 				0175029C1AE0D8870002E7A5 /* FenshuViewController.m in Sources */,
 				C3C1AB0B1ADE67FB00BE329D /* ShouYouViewController.m in Sources */,
 				C3CD00E71B18504800699762 /* MD5DataSigner.m in Sources */,
+				C3F206781B1C28F1002FB087 /* PaiHangViewController.m in Sources */,
 				C3CD00E31B18504800699762 /* Order.m in Sources */,
 				017502991AE0B22C0002E7A5 /* TimuViewController.m in Sources */,
 				01F430ED1ADBEBCB0034BC72 /* UserViewController.m in Sources */,
@@ -1066,8 +1118,10 @@
 				C3CD00EE1B1868CB00699762 /* WuPinXiangQingViewController.m in Sources */,
 				C3C64A841ADFD12F005BF4CF /* GuanYuAHYViewController.m in Sources */,
 				0134F07D1B01D36500DC6526 /* ShangChengViewController.m in Sources */,
+				C3F2067F1B1C2A18002FB087 /* XiaoXueZuViewController.m in Sources */,
 				C3CD00E51B18504800699762 /* DataSigner.m in Sources */,
 				C3CD78231B1309F60014CE28 /* LiWuGuangViewController.m in Sources */,
+				C3F2067C1B1C2A08002FB087 /* ZongBangViewController.m in Sources */,
 				C3C1AB0E1ADE680A00BE329D /* ShanghuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

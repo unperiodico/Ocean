@@ -8,7 +8,7 @@
 
 #import "GameViewController.h"
 #import "AppDelegate.h"
-
+#import "PaiHangViewController.h"
 @interface GameViewController ()
 
 @end
@@ -30,7 +30,20 @@
     UINib *nib=[UINib nibWithNibName:@"YouXiCell" bundle:nil];
     [_tbView registerNib:nib forCellReuseIdentifier:@"Cell"];
     
+    UIBarButtonItem *barBt=[[UIBarButtonItem alloc]initWithTitle:@"排行" style:UIBarButtonItemStylePlain target:self action:@selector(paihangClick:)];
     
+    [barBt setTintColor:[UIColor whiteColor]];
+    
+    self.navigationItem.rightBarButtonItem=barBt;
+    
+}
+
+
+//排行
+-(void)paihangClick:(UIBarButtonItem*)bt
+{
+    PaiHangViewController *ph=[[PaiHangViewController alloc]init];
+    [self.navigationController pushViewController:ph animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {

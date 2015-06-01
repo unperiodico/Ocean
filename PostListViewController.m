@@ -119,6 +119,9 @@
     NSDictionary *diction=_mutArray[indexPath.row];
     
    cell.textLabel.text=[diction objectForKey:@"ArticleTitle"];
+    
+    
+    
 
     return cell;
 }
